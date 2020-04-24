@@ -1,6 +1,10 @@
-$color: green;
+@import 'import/global';
+@import 'import/var';
+@import 'import/utilities';
+@import 'import/button';
+
+
 body{
-    background:$color;
-    display: flex;
-    box-shadow: 1px 1px 5px 3px #fff;
+    font-family: "Poppins", sans-serif;
+    @import 'import/navbar';
 }
