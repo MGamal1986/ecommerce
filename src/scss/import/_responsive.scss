@@ -1,0 +1,33 @@
+body{
+    @include mXl{
+    
+    }
+    @include mLg{
+      
+    }
+    @include mMd{
+    
+    }
+    @include mSm{
+        nav.navigation{
+            .nav-header{
+                display:block;
+                .navbar-list{
+                    border-bottom:1px solid rgba(0,0,0,0.1);
+                    justify-content: space-between;
+                }
+                .user{
+                    .search{
+                        flex-basis: 40%;
+                        i.fa-search{
+                            top: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mXs{
+       
+    }
+}

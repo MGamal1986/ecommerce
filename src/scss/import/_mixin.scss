@@ -1,0 +1,38 @@
+/*******************************************************
+** This mixins used for media query
+**
+********************************************************/
+// smart phone
+@mixin mXs{
+    @media screen and (max-width:500px){
+        @content;
+    }
+}
+
+// tablets and ipad
+@mixin mSm{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+// mini labtops
+@mixin mMd{
+    @media screen and (max-width:992px){
+        @content;
+    }
+}
+
+// labtpbs
+@mixin mLg{
+    @media screen and (max-width:1199px){
+        @content;
+    }
+}
+
+// labtpbs
+@mixin mXl{
+    @media screen and (min-width:1200px){
+        @content;
+    }
+}

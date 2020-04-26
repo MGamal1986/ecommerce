@@ -6,27 +6,63 @@
     <!-- include bootstrap grid system and reboot file-->
     <link rel="stylesheet" href="css/vendor/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/vendor/bootstrap-grid.min.css">
-    
+
+    <!-- include fontawsome v5 -->
+    <link rel="stylesheet" href="css/all.css">
+
     <!-- main stylesheet remove rel attribute as we include minified file -->
     <link  rel="stylesheet" href="css/style..min.css" type="text/css" >
     <title>Online Shop</title>
 </head>
 <body>
     <nav class="navigation">
-        <div class="container-fluid">
+            <div class="nav-header">
+                <div class="navbar-list d-flex">
+                    <div class="logo text-uppercase align-self-center">
+                        <span>essence</span>
+                    </div>
+                    <ul class="nav-list text-capitalize align-self-center hidden-xs hidden-sm hidden-md">
+                        <li class="nav-item">shop</li>
+                        <li class="nav-item">pages</li>
+                        <li class="nav-item">blog</li>
+                        <li class="nav-item">contact</li>
+                    </ul>
+                    <div class="expand-icon visible-sm visible-md">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="user">
+                    <form action="" class="search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" placeholder="type for search" class="form-control">
+                    </form>
+                    <div class="like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="account">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+            </div>
+        <!-- <div class="container-fluid">
             <div class="row no-gutters">
                 <div class="col-sm-12 col-md-8">
                     <div class="navbar-list d-flex">
                         <div class="logo text-uppercase align-self-center">
                             <span>essence</span>
                         </div>
-                        <ul class="nav-list text-capitalize align-self-center">
+                        <ul class="nav-list text-capitalize align-self-center hidden-xs hidden-sm hidden-md">
                             <li class="nav-item">shop</li>
                             <li class="nav-item">pages</li>
                             <li class="nav-item">blog</li>
                             <li class="nav-item">contact</li>
                         </ul>
-                        <div class="expand-icon">
+                        <div class="expand-icon visible-sm visible-md">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -36,21 +72,22 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="user">
                         <form action="" class="search">
+                            <i class="fas fa-search"></i>
                             <input type="text" name="search" placeholder="type for search" class="form-control">
                         </form>
                         <div class="like">
-                            <span>like</span>
+                            <i class="far fa-heart"></i>
                         </div>
                         <div class="account">
-                            <span>user</span>
+                            <i class="far fa-user"></i>
                         </div>
                         <div class="cart">
-                            <span>cart</span>
+                            <i class="fas fa-shopping-bag"></i>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </nav>
 
 

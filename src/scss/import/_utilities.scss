@@ -11,3 +11,95 @@
 .text-right{
     text-align: right !important;
 }
+
+/**************************************
+*** visible  Classes in media query ***
+***************************************/
+
+@include mXl{
+    .visible-sm{
+        display: none;
+    }
+    .hidden-xs{
+        display: block;
+    }
+    .hidden-sm{
+        display: block;
+    }
+    .hidden-md{
+        display: block;
+    }
+    .visible-md{
+        display: none;
+    }
+}
+@include mLg{
+    .visible-sm{
+        display: none;
+    }
+    .hidden-xs{
+        display: block;
+    }
+    .hidden-sm{
+        display: block;
+    }
+    .hidden-md{
+        display: block;
+    }
+    .visible-md{
+        display: none;
+    }
+}
+@include mMd{
+    .visible-sm{
+        display: none;
+    }
+    .hidden-xs{
+        display: block;
+    }
+    .hidden-sm{
+        display: block;
+    }
+    .hidden-md{
+        display: none;
+    }
+    .visible-md{
+        display: block;
+    }
+}
+@include mSm{
+    .visible-sm{
+        display: block;
+    }
+    .hidden-xs{
+        display: none;
+    }
+    .hidden-sm{
+        display: none;
+    }
+    .hidden-md{
+        display: none;
+    }
+    .visible-md{
+        display: block;
+    }
+}
+@include mXs{
+    .visible-sm{
+        display: block;
+    }
+    .hidden-xs{
+        display: none;
+    }
+    .hidden-sm{
+        display: none;
+    }
+    .hidden-md{
+        display: none;
+    }
+    .visible-md{
+        display: block;
+    }
+}
+
+

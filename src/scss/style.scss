@@ -1,10 +1,14 @@
 @import 'import/global';
 @import 'import/var';
+@import 'import/mixin';
 @import 'import/utilities';
 @import 'import/button';
+
 
 
 body{
     font-family: "Poppins", sans-serif;
     @import 'import/navbar';
+    height:1500px;
 }
+@import 'import/responsive';
