@@ -3,6 +3,7 @@
         border-bottom:1px solid rgba(0,0,0,0.1);
         position: fixed;
         width: 100%;
+        transition:all 0.3s ease-out;
         .nav-header{
             display: flex;
             .navbar-list{
@@ -16,11 +17,11 @@
                     list-style: none;
                     margin: 0;
                     font-size: 1rem;
-                    color: #999;
+                    color: #777;
                     font-weight: 300;
                     .nav-item{
                         display: inline-block;
-                        margin-right:1.25rem;
+                        margin-right:2rem;
                         color:inherit;
                         font-size:inherit;
                         &:last-child{
@@ -51,6 +52,8 @@
                 justify-content: flex-end;
                 .search{
                     position: relative;
+                    width: 240px;
+                    transition: width 0.3s ease-out;
                     i.fa-search{
                         position: absolute;
                         top: 31px;
@@ -59,10 +62,12 @@
                     }
                     input{
                         height:100%;
-                        padding: 1rem 3rem;
+                        padding: 1rem 0;
                         border: none;
                         border-right:1px solid rgba(0,0,0,0.1);
                         border-left:1px solid rgba(0,0,0,0.1);
+                        text-indent: 50px;
+                        
                     }
                 }
                 div{
@@ -72,13 +77,16 @@
                     } 
                     text-align: center;
                     cursor: pointer;
-                    color: #999;
+                    color: #444;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     padding: 0 2rem;
                 }
             }
+        }
+        &.shad{
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.17);
         }
     }
 

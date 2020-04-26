@@ -6,7 +6,16 @@ body{
       
     }
     @include mMd{
-    
+        nav.navigation{
+            .nav-header{
+              .navbar-list{
+                flex:0 0 20%;
+              }
+              .user{
+                flex:0 0 80%;
+              }
+            }
+        }
     }
     @include mSm{
         nav.navigation{
@@ -18,7 +27,6 @@ body{
                 }
                 .user{
                     .search{
-                        flex-basis: 40%;
                         i.fa-search{
                             top: 21px;
                         }
