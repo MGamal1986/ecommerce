@@ -8,12 +8,7 @@ body{
     @include mMd{
         nav.navigation{
             .nav-header{
-              .navbar-list{
-                flex:0 0 20%;
-              }
-              .user{
-                flex:0 0 80%;
-              }
+                grid-template-columns: 1fr 4fr;
             }
         }
     }
@@ -28,8 +23,17 @@ body{
                 .user{
                     .search{
                         i.fa-search{
-                            top: 21px;
+                            top: 10px;
                         }
+                    input{
+                        padding:0.4rem 0;
+                        &::placeholder{
+                            font-size: 0.7rem;
+                        }
+                    }
+                    }
+                    &>div{
+                        padding: 0 0.9rem;
                     }
                 }
             }
