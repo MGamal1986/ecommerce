@@ -23,3 +23,12 @@ searchInput.addEventListener('focus',(e)=>{
 searchInput.addEventListener('blur',(e)=>{
     searchClass.style.width = "240px";
 });
+
+// add click event to burger icon in navbar
+// catch burger icon
+const expandBtn = document.querySelector('.navbar-list .expand-icon');
+// add click event
+expandBtn.addEventListener('click',(event)=>{
+    console.log(event.target)
+});
+

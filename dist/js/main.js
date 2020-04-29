@@ -21,4 +21,11 @@ searchInput.addEventListener('focus', function (e) {
 
 searchInput.addEventListener('blur', function (e) {
   searchClass.style.width = "240px";
+}); // add click event to burger icon in navbar
+// catch burger icon
+
+var expandBtn = document.querySelector('.navbar-list .expand-icon'); // add click event
+
+expandBtn.addEventListener('click', function (event) {
+  console.log(event.target);
 });

@@ -2,38 +2,61 @@
     nav.navigation{
         border-bottom:1px solid rgba(0,0,0,0.1);
         position: fixed;
+        z-index:10;
+        background: #fff;
         width: 100%;
         transition:all 0.3s ease-out;
         .nav-header{
             display: grid;
             grid-template-columns: 1fr 1fr;
             .navbar-list{
-                padding:1.5rem;
-                flex:0 0 50%;
                 .logo{
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     font-weight: bold;
+                    padding:1.5rem;
                 }
                 .nav-list{
                     list-style: none;
                     margin: 0;
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                     color: #777;
                     font-weight: 300;
+                    padding: 0;
                     .nav-item{
                         display: inline-block;
-                        margin-right:2rem;
                         color:inherit;
                         font-size:inherit;
-                        &:last-child{
-                            margin-right:0;
+                        padding:1.5rem 1rem;
+                        .dropdown-menu{
+                            top: 80px;
+                            left: -18px;
+                            color: inherit;
+                            font-size: inherit;
+                            padding: 0;
+                            box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.15);
+                            visibility: hidden;
+                            transition: all 0.3s linear;
+                            opacity: 0;
+                            display: block;
+                            a{
+                                color: inherit;
+                                font-size: inherit;
+                                border-bottom: 1px solid rgba(0,0,0,0.2);
+                                padding: 0.5rem;
+                                font-weight: inherit;
+                            }
+                        }
+                        &.pages:hover .dropdown-menu{
+                            visibility: visible;
+                            top: 60px;
+                            opacity: 1;
                         }
                     }
                 }
                 .expand-icon{
-                    width: 45px;
+                    width: 35px;
                     align-self: center;
-                    margin-left: 1rem;
+                    margin-right: 1rem;
                     cursor: pointer;
                     span{
                         background:#999;
@@ -43,23 +66,35 @@
                         &:last-child{
                             margin-bottom:0;
                         }
+                        border-radius: 4px;
+                    }
+                }
+                .expand-menu{
+                    position: fixed;
+                    z-index: 1000;
+                    left: -250px;
+                    width: 250px;
+                    height: 100vh;
+                    background: red;
+                    transition: left 0.3s linear;
+                    &.show{
+                        left: 0;
                     }
                 }
             }
             .user{
-                flex:0 0 50%;
-                min-width:50%;
                 display: flex;
                 justify-content: flex-end;
                 .search{
                     position: relative;
                     width: 240px;
-                    transition: width 0.3s ease-out;
+                    transition: width 0.3s linear;
                     i.fa-search{
                         position: absolute;
-                        top: 31px;
+                        top: 30px;
                         left: 26px;
                         color: #999;
+                        font-size: 0.9rem;
                     }
                     input{
                         height:100%;
