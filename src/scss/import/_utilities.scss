@@ -15,6 +15,20 @@
         top: 27px;
     }
 }
+.down-space{
+    position: relative;
+    cursor: pointer;
+    &:after{
+        content: '\f107';
+        font-family: 'Font Awesome 5 free';
+        font-style: normal;
+        font-weight: 600;
+        position: absolute;
+        right: 16px;
+        top: 8px;
+        font-size: 0.8rem;
+    }
+}
 
 // cart super number class
 .cart-no{

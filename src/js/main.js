@@ -27,8 +27,44 @@ searchInput.addEventListener('blur',(e)=>{
 // add click event to burger icon in navbar
 // catch burger icon
 const expandBtn = document.querySelector('.navbar-list .expand-icon');
-// add click event
+// catch close button
+const closeBtn = document.querySelector('.navbar-list .expand-icon.back');
+// catch expan menu
+const expanMenu = document.querySelector('.navbar-list .expand-menu')
+
+// add click event to show expand menu
 expandBtn.addEventListener('click',(event)=>{
-    console.log(event.target)
+    expanMenu.classList.toggle('show');
+    expandBtn.classList.toggle('back');
+    // expandBtn.classList.remove('boxy');
 });
+// add click event to close expand menu
+// closeBtn.addEventListener('click',(event)=>{
+//     expanMenu.classList.remove('show');
+//     closeBtn.classList.remove('back');
+//     expandBtn.classList.add('boxy');
+// })
+
+
+// close expand menu
+document.body.addEventListener('click',(event)=>{
+    if(!event.target.closest('.navigation') && expanMenu.classList.contains('show') ){
+        expanMenu.classList.remove('show');
+        expandBtn.classList.toggle('back');
+    }
+});
+
+// expand submenu 
+// catch submenu
+const subMenu = document.querySelector('.navbar-list .expand-menu .menu');
+// catch pages list item
+const listPages = document.querySelector('.navbar-list .expand-menu .pages');
+
+listPages.addEventListener('click', e =>{
+    subMenu.classList.toggle('expand');
+});
+
+
+
+
 
