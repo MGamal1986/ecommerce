@@ -24,27 +24,25 @@ searchInput.addEventListener('blur', function (e) {
 }); // add click event to burger icon in navbar
 // catch burger icon
 
-var expandBtn = document.querySelector('.navbar-list .expand-icon'); // catch close button
+var expandBtn = document.querySelector('.navbar-list .expand-icon'); // catch expan menu
 
-var closeBtn = document.querySelector('.navbar-list .expand-icon.back'); // catch expan menu
+var expanMenu = document.querySelector('.navbar-list .expand-menu'); // catch fontawsome icon in expand button
 
-var expanMenu = document.querySelector('.navbar-list .expand-menu'); // add click event to show expand menu
+var iconBtn = document.querySelector('.navbar-list .expand-icon i'); // add click event to show expand menu
 
 expandBtn.addEventListener('click', function (event) {
-  expanMenu.classList.toggle('show');
-  expandBtn.classList.toggle('back'); // expandBtn.classList.remove('boxy');
-}); // add click event to close expand menu
-// closeBtn.addEventListener('click',(event)=>{
-//     expanMenu.classList.remove('show');
-//     closeBtn.classList.remove('back');
-//     expandBtn.classList.add('boxy');
-// })
-// close expand menu
+  expanMenu.classList.toggle('show'); // expandBtn.classList.toggle('back');
+
+  iconBtn.classList.toggle('fa-bars');
+  iconBtn.classList.toggle('fa-times');
+}); // close expand menu
 
 document.body.addEventListener('click', function (event) {
   if (!event.target.closest('.navigation') && expanMenu.classList.contains('show')) {
-    expanMenu.classList.remove('show');
-    expandBtn.classList.toggle('back');
+    expanMenu.classList.remove('show'); // expandBtn.classList.toggle('back');
+
+    iconBtn.classList.toggle('fa-bars');
+    iconBtn.classList.toggle('fa-times');
   }
 }); // expand submenu 
 // catch submenu

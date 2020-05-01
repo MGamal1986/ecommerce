@@ -27,30 +27,31 @@ searchInput.addEventListener('blur',(e)=>{
 // add click event to burger icon in navbar
 // catch burger icon
 const expandBtn = document.querySelector('.navbar-list .expand-icon');
-// catch close button
-const closeBtn = document.querySelector('.navbar-list .expand-icon.back');
+
 // catch expan menu
 const expanMenu = document.querySelector('.navbar-list .expand-menu')
+
+// catch fontawsome icon in expand button
+
+const iconBtn = document.querySelector('.navbar-list .expand-icon i');
 
 // add click event to show expand menu
 expandBtn.addEventListener('click',(event)=>{
     expanMenu.classList.toggle('show');
-    expandBtn.classList.toggle('back');
-    // expandBtn.classList.remove('boxy');
+    // expandBtn.classList.toggle('back');
+    iconBtn.classList.toggle('fa-bars');
+    iconBtn.classList.toggle('fa-times');
 });
-// add click event to close expand menu
-// closeBtn.addEventListener('click',(event)=>{
-//     expanMenu.classList.remove('show');
-//     closeBtn.classList.remove('back');
-//     expandBtn.classList.add('boxy');
-// })
+
 
 
 // close expand menu
 document.body.addEventListener('click',(event)=>{
     if(!event.target.closest('.navigation') && expanMenu.classList.contains('show') ){
         expanMenu.classList.remove('show');
-        expandBtn.classList.toggle('back');
+        // expandBtn.classList.toggle('back');
+        iconBtn.classList.toggle('fa-bars');
+        iconBtn.classList.toggle('fa-times');
     }
 });
 
