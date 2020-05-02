@@ -40,17 +40,18 @@
                             transition: all 0.3s linear;
                             opacity: 0;
                             display: block;
+                            border: 1px solid rgba(0,0,0,.07);
                             a{
                                 color: inherit;
                                 font-size: 0.9rem;
-                                border-bottom:  0 2px 5px 0 rgba(0,0,0,.08);
+                                border-bottom: 1px solid rgba(0,0,0,.07);
                                 padding: 0.5rem;
                                 font-weight: inherit;
                             }
                         }
                         &.pages:hover .dropdown-menu{
                             visibility: visible;
-                            top: 69px;
+                            top: 71px;
                             opacity: 1;
                         }
                         &.collections{
