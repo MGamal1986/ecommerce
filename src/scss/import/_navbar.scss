@@ -11,13 +11,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             .navbar-list{
-                font-size: 0.8rem;
+                font-size: 1rem;
                 color: #777;
-                font-weight: 300;
+                font-weight: 400;
                 .logo{
                     font-size: 1rem;
                     font-weight: bold;
                     padding:1.5rem;
+                    color: #000;
                 }
                 .nav-list{
                     list-style: none;
@@ -34,23 +35,89 @@
                             color: inherit;
                             font-size: inherit;
                             padding: 0;
-                            box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.15);
+                            box-shadow:  0 2px 5px 0 rgba(0,0,0,.08);
                             visibility: hidden;
                             transition: all 0.3s linear;
                             opacity: 0;
                             display: block;
                             a{
                                 color: inherit;
-                                font-size: inherit;
-                                border-bottom: 1px solid rgba(0,0,0,0.2);
+                                font-size: 0.9rem;
+                                border-bottom:  0 2px 5px 0 rgba(0,0,0,.08);
                                 padding: 0.5rem;
                                 font-weight: inherit;
                             }
                         }
                         &.pages:hover .dropdown-menu{
                             visibility: visible;
-                            top: 60px;
+                            top: 69px;
                             opacity: 1;
+                        }
+                        &.collections{
+                            .menu-collections{
+                                cursor: default;
+                                position: fixed;
+                                top: 100px;
+                                background: #fff;
+                                display: grid;
+                                grid-template-columns: repeat(4,1fr);
+                                width: 100%;
+                                left: 0px;
+                                border-top: 1px solid rgba(0, 0, 0, 0.07);
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+                                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08);
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: all 0.3s linear;
+                                .collection{
+                                    padding: 1.5rem;
+                                    border-left: 1px solid rgba(0, 0, 0, 0.07);
+                                    &:first-child{
+                                        border-left: 0;
+                                    }
+                                    &:last-child{
+                                        border-left: 0;
+                                    }
+                                    .collection-title{
+                                        text-transform: capitalize;
+                                        color: #000;
+                                        font-size: 1rem;
+                                        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+                                        padding-bottom: .9rem;
+                                        margin-bottom: 0.9rem
+                                    }
+                                    .collection-list{
+                                        color: inherit;
+                                        font-size: .9rem;
+                                        padding: 0 0.5rem;
+                                        .collection-item{
+                                            .collection-link{
+                                                text-decoration: none;
+                                                color: inherit;
+                                                font-size: inherit;
+                                                display: block;
+                                                padding: 0.25rem 0;
+                                                transition: color 0.1s linear;
+                                                &:hover{
+                                                    color:#000;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.image{
+                                        img{
+                                            width: 100%;
+                                        }
+                                        // background: url('../img/bg-img/bg-6.jpg');
+                                        // background-size: cover;
+                                    }
+                                }
+                            }
+                        }
+                        &.collections:hover .menu-collections{
+                            top: 72px;
+                            opacity: 1;
+                            visibility: visible;
                         }
                     }
                 }
@@ -86,6 +153,9 @@
                                 display: block;
                                 padding: 0.5rem;
                                 border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+                                &:hover{
+                                    background-color: #f8f9fa;
+                                }
                             }
                             height: 0;
                             overflow: hidden;
