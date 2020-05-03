@@ -17,7 +17,7 @@ const searchInput = document.querySelector('.nav-header input');
 const searchClass = searchInput.parentElement;
 // add focus event
 searchInput.addEventListener('focus',(e)=>{
-    searchClass.style.width = "450px";
+    searchClass.style.width = "440px";
 });
 // add blur event
 searchInput.addEventListener('blur',(e)=>{
@@ -67,7 +67,6 @@ listPages.addEventListener('click', e =>{
 
 // catch collection list item
 const listCollect = document.querySelector('.navbar-list .expand-menu .collections');
-console.log(listCollect);
 // catch collections submenu
 const collectionSubMenu = document.querySelector('.navbar-list .expand-menu .menu-collections');
 
@@ -76,6 +75,22 @@ const collectionSubMenu = document.querySelector('.navbar-list .expand-menu .men
 listCollect.addEventListener('click',(event)=>{
     collectionSubMenu.classList.toggle('expand');
     expanMenu.classList.toggle('scroll-y');
+});
+
+
+// open cart page
+// catch cart element
+const cartElement = document.querySelector('.nav-header .user .cart');
+// catch overlay layer
+const overlay = document.querySelector('nav .overlay');
+
+// catch cart icon in overlay layer
+const cartIcon = document.querySelector('nav .overlay .cart-icon');
+cartElement.addEventListener('click',(event)=>{
+    overlay.classList.add('overhead');
+});
+cartIcon.addEventListener('click',(event)=>{
+    overlay.classList.remove('overhead');
 });
 
 

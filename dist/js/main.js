@@ -16,7 +16,7 @@ var searchInput = document.querySelector('.nav-header input');
 var searchClass = searchInput.parentElement; // add focus event
 
 searchInput.addEventListener('focus', function (e) {
-  searchClass.style.width = "450px";
+  searchClass.style.width = "440px";
 }); // add blur event
 
 searchInput.addEventListener('blur', function (e) {
@@ -54,12 +54,24 @@ listPages.addEventListener('click', function (e) {
   subMenu.classList.toggle('expand');
 }); // catch collection list item
 
-var listCollect = document.querySelector('.navbar-list .expand-menu .collections');
-console.log(listCollect); // catch collections submenu
+var listCollect = document.querySelector('.navbar-list .expand-menu .collections'); // catch collections submenu
 
 var collectionSubMenu = document.querySelector('.navbar-list .expand-menu .menu-collections'); // add click event on collection list item
 
 listCollect.addEventListener('click', function (event) {
   collectionSubMenu.classList.toggle('expand');
   expanMenu.classList.toggle('scroll-y');
+}); // open cart page
+// catch cart element
+
+var cartElement = document.querySelector('.nav-header .user .cart'); // catch overlay layer
+
+var overlay = document.querySelector('nav .overlay'); // catch cart icon in overlay layer
+
+var cartIcon = document.querySelector('nav .overlay .cart-icon');
+cartElement.addEventListener('click', function (event) {
+  overlay.classList.add('overhead');
+});
+cartIcon.addEventListener('click', function (event) {
+  overlay.classList.remove('overhead');
 });

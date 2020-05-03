@@ -44,3 +44,32 @@
         font-family: Poppins,sans-serif;
     }
 }
+
+// cart icon in overlay layer
+.cart-icon{
+    position: absolute;
+    &:after{
+        content: '\f290';
+        position: absolute;
+        display: inline-block;
+        background: #fff;
+        font-family: 'Font Awesome 5 free';
+        font-style: normal;
+        font-weight: 600;
+        color: #000;
+        padding: 1.5rem 2rem;
+        cursor: pointer;
+        left: -78px;
+    }
+    &:before{
+        content: '3';
+        color: var(--indigo);
+        font-size: .9rem;
+        font-weight: 700;
+        position: absolute;
+        left: -27px;
+        top: 17px;
+        font-family: Poppins,sans-serif;
+        z-index: 150;
+    }
+}
