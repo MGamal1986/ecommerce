@@ -61,15 +61,14 @@
         cursor: pointer;
         left: -78px;
     }
-    &:before{
-        content: '3';
-        color: var(--indigo);
-        font-size: .9rem;
-        font-weight: 700;
-        position: absolute;
-        left: -27px;
-        top: 17px;
-        font-family: Poppins,sans-serif;
-        z-index: 150;
-    }
+}
+// no of items in cart box
+.no-of-items{
+    position: absolute;
+    color: var(--indigo);
+    font-weight: 700;
+    font-size: 0.9rem;
+    top: 13px;
+    right: 23px;
+    z-index: 20;
 }

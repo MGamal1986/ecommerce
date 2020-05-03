@@ -68,10 +68,27 @@ var cartElement = document.querySelector('.nav-header .user .cart'); // catch ov
 
 var overlay = document.querySelector('nav .overlay'); // catch cart icon in overlay layer
 
-var cartIcon = document.querySelector('nav .overlay .cart-icon');
+var cartIcon = document.querySelector('nav .overlay .cart-icon'); // catch cart contianer in overlay layer
+
+var cartContainer = document.querySelector('nav .overlay .cart-container');
 cartElement.addEventListener('click', function (event) {
   overlay.classList.add('overhead');
+  setTimeout(function () {
+    cartContainer.classList.add('appear');
+  }, 10);
 });
 cartIcon.addEventListener('click', function (event) {
-  overlay.classList.remove('overhead');
+  cartContainer.classList.remove('appear');
+  setTimeout(function () {
+    overlay.classList.remove('overhead');
+  }, 400);
+}); // add click event on overlay layer
+
+overlay.addEventListener('click', function (event) {
+  if (!event.target.closest('.cart-container')) {
+    cartContainer.classList.remove('appear');
+    setTimeout(function () {
+      overlay.classList.remove('overhead');
+    }, 400);
+  }
 });

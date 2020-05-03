@@ -86,12 +86,34 @@ const overlay = document.querySelector('nav .overlay');
 
 // catch cart icon in overlay layer
 const cartIcon = document.querySelector('nav .overlay .cart-icon');
+
+// catch cart contianer in overlay layer
+const cartContainer = document.querySelector('nav .overlay .cart-container');
 cartElement.addEventListener('click',(event)=>{
     overlay.classList.add('overhead');
+    setTimeout(()=>{
+        cartContainer.classList.add('appear');
+    },10)
+    
 });
 cartIcon.addEventListener('click',(event)=>{
-    overlay.classList.remove('overhead');
+    
+    cartContainer.classList.remove('appear');
+    setTimeout(()=>{
+        overlay.classList.remove('overhead');
+    },400)
+    
 });
+
+// add click event on overlay layer
+overlay.addEventListener('click',(event)=>{
+    if(!event.target.closest('.cart-container')){
+        cartContainer.classList.remove('appear');
+        setTimeout(()=>{
+            overlay.classList.remove('overhead');
+        },400)
+    } 
+})
 
 
 

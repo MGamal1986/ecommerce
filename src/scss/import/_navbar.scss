@@ -263,37 +263,113 @@
                     justify-content: center;
                     align-items: center;
                     padding: 0 2rem;
+                    &.cart{
+                        position: relative;
+                    }
                 }
             }
         }
         &.shad{
             box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.17);
         }
+
         .overlay{
             position: fixed;
             top: 0;
-            left: 0;
-            z-index: 100;
+            right: 0;
+            z-index: -1;
             width: 100vw;
             height: 100vh;
+            visibility: hidden;
+            opacity: 0;
             background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
-            display: none;
+            transition: all 0.3s ease-in-out;
             &.overhead{
-                display: block;
+                visibility: visible;
+                opacity: 1;
+                z-index: 20;
             }
             .cart-container{
                 background: #fff;
                 display: grid;
                 grid-template-columns: 1fr 3fr;
-                width: 70%;
+                width: 45%;
                 height: 100vh;
                 margin-left: auto;
                 position: relative;
+                right: -100%;
+                transition: right 1s ease-in-out;
                 .cart-items{
-
+                    overflow-y: scroll;
+                    scrollbar-width: thin;
+                    .item{
+                        height: 270px;
+                        cursor: pointer;
+                        .description{
+                            color: #fff;
+                            font-size: 0.9rem;
+                            text-transform: capitalize;
+                            padding: 2.5rem 0.8rem;
+                            height: 100%;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                background:rgba(0, 0, 0, 0.36);
+                            }
+                            .title{
+                                margin-bottom: 1.5rem;
+                                .brand{
+                                    color: #ccc;
+                                    font-size: 0.7rem;
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                }
+                                .short-dec{
+                                    font-size: 0.7rem;
+                                    font-weight: bold;
+                                }
+                                }
+                            
+                            .info{
+                                margin-bottom: 1.5rem;
+                                .size{
+                                    display: block;
+                                    font-size: 0.7rem;
+                                    color: #ccc;
+                                    font-weight: bold;
+                                }
+                                .color{
+                                    display: block;
+                                    font-size: 0.7rem;
+                                    color: #ccc;
+                                    font-weight: bold;
+                                }
+                            }
+                            .price{
+                                .item-price{
+                                    font-weight: bold;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    .item-1{
+                        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/product-img/product-1.jpg');
+                        background-size: cover;
+                    }
+                    .item-2{
+                        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/product-img/product-2.jpg');
+                        background-size: cover;
+                    }
+                    .item-3{
+                        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/product-img/product-3.jpg');
+                        background-size: cover;
+                    }
                 }
                 .cart-summary{
 
+                }
+                &.appear{
+                    right: 0;
                 }
             }
         }
