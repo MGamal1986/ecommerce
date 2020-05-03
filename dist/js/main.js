@@ -52,4 +52,14 @@ var subMenu = document.querySelector('.navbar-list .expand-menu .menu'); // catc
 var listPages = document.querySelector('.navbar-list .expand-menu .pages');
 listPages.addEventListener('click', function (e) {
   subMenu.classList.toggle('expand');
+}); // catch collection list item
+
+var listCollect = document.querySelector('.navbar-list .expand-menu .collections');
+console.log(listCollect); // catch collections submenu
+
+var collectionSubMenu = document.querySelector('.navbar-list .expand-menu .menu-collections'); // add click event on collection list item
+
+listCollect.addEventListener('click', function (event) {
+  collectionSubMenu.classList.toggle('expand');
+  expanMenu.classList.toggle('scroll-y');
 });

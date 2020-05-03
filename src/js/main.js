@@ -65,6 +65,18 @@ listPages.addEventListener('click', e =>{
     subMenu.classList.toggle('expand');
 });
 
+// catch collection list item
+const listCollect = document.querySelector('.navbar-list .expand-menu .collections');
+console.log(listCollect);
+// catch collections submenu
+const collectionSubMenu = document.querySelector('.navbar-list .expand-menu .menu-collections');
+
+// add click event on collection list item
+
+listCollect.addEventListener('click',(event)=>{
+    collectionSubMenu.classList.toggle('expand');
+    expanMenu.classList.toggle('scroll-y');
+});
 
 
 
