@@ -17,10 +17,12 @@ body{
             .nav-header{
                 display:block;
                 .navbar-list{
+                    min-width: 100%;
                     border-bottom:1px solid rgba(0,0,0,0.1);
                     justify-content: space-between;
                 }
                 .user{
+                    min-width: 100%;
                     padding:0 10px;
                     .search{
                         span{
@@ -28,15 +30,21 @@ body{
                             left: 1px;
                             padding: 0.25rem 0.5rem;
                         }
-                    input{
-                        padding:0.4rem 0;
-                        &::placeholder{
-                            font-size: 0.7rem;
+                        input{
+                            padding:0.4rem 0;
+                            &::placeholder{
+                                font-size: 0.7rem;
+                            }
                         }
-                    }
                     }
                     &>div{
                         padding: 0 0.9rem;
+                        &.cart{
+                            .no-of-items{
+                                top: -1px ;
+                                right: 5px ;
+                            }
+                        }
                     }
                 }
             }

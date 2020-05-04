@@ -8,12 +8,14 @@
         width: 100%;
         transition:all 0.3s ease-out;
         .nav-header{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
             .navbar-list{
                 font-size: 1rem;
                 color: #777;
                 font-weight: 400;
+                width: 50%;
+                flex-basis: 50%;
+                min-width: 50%;
                 .logo{
                     font-size: 1rem;
                     font-weight: bold;
@@ -226,12 +228,16 @@
                 }
             }
             .user{
+                width: 50%;
+                flex-basis: 50%;
+                min-width: 50%;
+
                 display: flex;
                 justify-content: flex-end;
                 .search{
                     position: relative;
-                    width: 240px;
-                    transition: width 0.3s linear;
+                    min-width: 240px;
+                    transition: all 0.3s linear;
                     span{
                         position: absolute;
                         top: 9px;
