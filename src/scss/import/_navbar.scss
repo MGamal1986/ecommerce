@@ -372,7 +372,41 @@
                     }
                 }
                 .cart-summary{
+                    .summary-title{
+                        padding: 2.5rem;
+                        h3{
+                            font-weight: 600;
+                        }
+                    }
+                    .summary-info{
+                        padding: 2.5rem;
+                        table{
+                            font-weight: 500;
+                            tr{
+                                margin-bottom: 0.5rem;
+                                display: inline-block;
+                                .s-info{
+                                    padding-right: 10rem;
+                                }
+                            }
 
+                        }
+                    }
+                    .summary-checkout{
+                        padding: 2.5rem;
+                        a{
+                            border-radius: 0 !important;
+                            outline: 0;
+                            border: 0;
+                            font-size: 0.9rem;
+                            padding: 0.75rem 2rem;
+                            &:hover{
+                                background: var(--danger);
+                                outline: 0;
+                                border: 0;
+                            }
+                        }
+                    }
                 }
                 &.appear{
                     right: 0;
