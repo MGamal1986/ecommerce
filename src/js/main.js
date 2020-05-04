@@ -17,11 +17,11 @@ const searchInput = document.querySelector('.nav-header input');
 const searchClass = searchInput.parentElement;
 // add focus event
 searchInput.addEventListener('focus',(e)=>{
-    searchClass.style.width = "440px";
+    searchClass.style.minWidth = "440px";
 });
 // add blur event
 searchInput.addEventListener('blur',(e)=>{
-    searchClass.style.width = "240px";
+    searchClass.style.minWidth = "240px";
 });
 
 // add click event to burger icon in navbar
