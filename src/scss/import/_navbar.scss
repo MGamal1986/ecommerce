@@ -310,6 +310,11 @@
             grid-template-columns: 190px calc(100% - 190px);
             width: 700px;
             transition: right 0.7s ease-in-out;
+            .cart-icon{
+                span{
+                    z-index: 35;
+                }
+            }
             .close-x{
                 position: relative;
                 left: 100%;
