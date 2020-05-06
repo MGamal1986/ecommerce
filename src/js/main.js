@@ -85,10 +85,10 @@ const cartElement = document.querySelector('.nav-header .user .cart');
 const overlay = document.querySelector('nav .overlay');
 
 // catch cart icon in overlay layer
-const cartIcon = document.querySelector('nav .overlay .cart-icon');
+const cartIcon = document.querySelector('nav .cart-container .cart-icon');
 
 // catch cart contianer in overlay layer
-const cartContainer = document.querySelector('nav .overlay .cart-container');
+const cartContainer = document.querySelector('nav .cart-container');
 cartElement.addEventListener('click',(event)=>{
     overlay.classList.add('overhead');
     setTimeout(()=>{
@@ -104,6 +104,17 @@ cartIcon.addEventListener('click',(event)=>{
     },400)
     
 });
+
+// catch close x in cart container in samll screen
+const cartCloseX = document.querySelector('nav .cart-container .close-x');
+// add click event to close cart pagein samll screen
+
+cartCloseX.addEventListener('click',(event)=>{
+    cartContainer.classList.remove('appear');
+    setTimeout(()=>{
+        overlay.classList.remove('overhead');
+    },400)
+})
 
 // add click event on overlay layer
 overlay.addEventListener('click',(event)=>{
