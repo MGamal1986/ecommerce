@@ -68,9 +68,9 @@ var cartElement = document.querySelector('.nav-header .user .cart'); // catch ov
 
 var overlay = document.querySelector('nav .overlay'); // catch cart icon in overlay layer
 
-var cartIcon = document.querySelector('nav .overlay .cart-icon'); // catch cart contianer in overlay layer
+var cartIcon = document.querySelector('nav .cart-container .cart-icon'); // catch cart contianer in overlay layer
 
-var cartContainer = document.querySelector('nav .overlay .cart-container');
+var cartContainer = document.querySelector('nav .cart-container');
 cartElement.addEventListener('click', function (event) {
   overlay.classList.add('overhead');
   setTimeout(function () {
@@ -78,6 +78,15 @@ cartElement.addEventListener('click', function (event) {
   }, 10);
 });
 cartIcon.addEventListener('click', function (event) {
+  cartContainer.classList.remove('appear');
+  setTimeout(function () {
+    overlay.classList.remove('overhead');
+  }, 400);
+}); // catch close x in cart container in samll screen
+
+var cartCloseX = document.querySelector('nav .cart-container .close-x'); // add click event to close cart pagein samll screen
+
+cartCloseX.addEventListener('click', function (event) {
   cartContainer.classList.remove('appear');
   setTimeout(function () {
     overlay.classList.remove('overhead');

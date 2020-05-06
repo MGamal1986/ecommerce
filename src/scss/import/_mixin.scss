@@ -4,7 +4,7 @@
 ********************************************************/
 // smart phone
 @mixin mXs{
-    @media screen and (max-width:500px){
+    @media screen and (max-width:576px){
         @content;
     }
 }
