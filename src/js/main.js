@@ -127,5 +127,19 @@ overlay.addEventListener('click',(event)=>{
 })
 
 
+// remove items from cart
+// catch remove button
+const removeBtn = document.querySelectorAll('nav .cart-container .item .close-x i');
+
+// add remove event
+removeBtn.forEach((btn)=>{
+    btn.addEventListener('click',(event)=>{
+        setTimeout(()=>{
+            event.target.parentElement.parentElement.classList.add('remove')
+        },1)
+    })
+})
+
+
 
 
