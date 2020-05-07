@@ -2,19 +2,22 @@
 // catch input 
 const searchInput = document.querySelector('.nav-header input');
 const searchClass = searchInput.parentElement;
-// add focus event
-window.addEventListener('resize',(event)=>{
-    let windowSize = window.screen.width;
-    searchInput.addEventListener('focus',(e)=>{
-        if(window.screen.width >= '769'){
-            searchClass.style.minWidth = "440px";
-        }
-    });
-    // add blur event
-    searchInput.addEventListener('blur',(e)=>{
-        searchClass.style.minWidth = "240px";
-    });
+let windowSize;
+window.addEventListener('load',(event)=>{
+    windowSize = window.screen.width;
 })
+// add focus event
+searchInput.addEventListener('focus',(e)=>{
+    if(window.screen.width >= '769'){
+        searchClass.style.minWidth = "440px";
+    }
+});
+// add blur event
+searchInput.addEventListener('blur',(e)=>{
+    searchClass.style.minWidth = "240px";
+});
+
+
 
 
 // add click event to burger icon in navbar
