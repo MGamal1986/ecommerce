@@ -129,21 +129,14 @@ overlay.addEventListener('click',(event)=>{
 
 // remove items from cart
 // catch remove button
-const removeBtn = document.querySelectorAll('nav .cart-container .item .close-x');
+const removeBtn = document.querySelectorAll('nav .cart-container .item .close-x i');
 
 // add remove event
 removeBtn.forEach((btn)=>{
-    // btn.onclick = (event)=>{
-    //     console.log(event.target.parentElement);
-    // }
     btn.addEventListener('click',(event)=>{
-       
-       if(event.target.parentElement.classList.contains('item')){
-        console.log('catch item parent',event.target.parentElement )
         setTimeout(()=>{
-            event.target.parentElement.remove();
-        },150)
-       }
+            event.target.parentElement.parentElement.classList.add('remove')
+        },1)
     })
 })
 

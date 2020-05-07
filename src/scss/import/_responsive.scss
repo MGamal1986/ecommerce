@@ -12,7 +12,6 @@ body{
             }
             .cart-container{
                 width: 550px;
-                grid-template-columns: 190px calc(100% - 190px);
             }
         }
     }
@@ -54,19 +53,6 @@ body{
             }
             .cart-container{
                 width: 400px;
-                grid-template-columns: 120px calc(100% - 120px);
-                .cart-items{
-                    .item{
-                        .description{
-                            &>div{
-                                margin-bottom: 1rem !important;
-                                &:last-child{
-                                    margin-bottom: 0 !important;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -80,7 +66,7 @@ body{
                 .cart-items{
                     display: grid;
                     grid-template-columns: repeat(3,3fr);
-                    grid-gap: 10px;
+                    grid-gap: 20px;
                     overflow-y: none;
                     .item{
                         .description{
