@@ -104,3 +104,23 @@
         }
     }
 }
+
+// background image in new collection section
+.bg-holder{
+    position: relative;
+    .ratio{
+        padding-top: 37%
+    }
+    .holder-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        img{
+            width: 100%
+        }
+    }
+}
+
+

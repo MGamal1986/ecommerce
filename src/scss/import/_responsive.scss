@@ -14,6 +14,20 @@ body{
                 width: 550px;
             }
         }
+        .new-collection{
+            .pull-up{
+                .sub-title{
+                    margin-bottom: 1rem;
+                }
+                .main-title{
+                    margin-bottom: 2rem;
+                    font-size:2.5rem;
+                }
+                .view{
+    
+                }
+            }
+        }
     }
     @include mSm{
         nav.navigation{
@@ -55,6 +69,27 @@ body{
                 width: 400px;
             }
         }
+        .new-collection{
+            top: 110px;
+            .holder-content{
+                img{
+                    min-height:350px;
+                }
+            }
+            .pull-up{
+                margin-top: -35%;
+                .sub-title{
+                    margin-bottom: 0.25rem;
+                }
+                .main-title{
+                    margin-bottom: 1rem;
+                    font-size:1.5rem;
+                }
+                .view{
+    
+                }
+            }
+        }
     }
     @include mXs{
         nav.navigation{
@@ -85,6 +120,12 @@ body{
                         }
                     }
                 }
+            }
+        }
+        .new-collection{
+            min-width: 570px;
+            .pull-up{
+                margin-top: -40%;
             }
         }
     }

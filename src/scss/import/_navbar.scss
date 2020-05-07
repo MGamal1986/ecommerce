@@ -307,6 +307,7 @@
             right: -800px;
             background: #fff;
             width: 700px;
+            min-height: 100vh;
             transition: right 0.7s ease-in-out;
             &>.cart-icon{
                 span{

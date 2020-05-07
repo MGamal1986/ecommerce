@@ -9,6 +9,7 @@
 body{
     font-family: "Poppins", sans-serif;
     @import 'import/navbar';
+    @import 'import/new-collection';
     min-height:2500px;
     overflow-x: hidden;
 }
