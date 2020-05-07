@@ -2,21 +2,17 @@
 // catch input 
 const searchInput = document.querySelector('.nav-header input');
 const searchClass = searchInput.parentElement;
-let windowSize;
-window.addEventListener('load',(event)=>{
-    windowSize = window.screen.width;
-})
+// let windowSize;
+// window.addEventListener('load',(event)=>{
+//     windowSize = window.screen.width;
+// })
 // add focus event
 searchInput.addEventListener('focus',(e)=>{
-    if(window.screen.width >= '769'){
-        searchClass.style.minWidth = "440px";
-    }
+    searchClass.style.minWidth = "440px";
 });
 // add blur event
 searchInput.addEventListener('blur',(e)=>{
-    if(window.screen.width >= '769'){
-        searchClass.style.minWidth = "240px";
-    }
+    searchClass.style.minWidth = "240px";
 });
 
 

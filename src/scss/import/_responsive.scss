@@ -39,7 +39,6 @@ body{
                     min-width: 100%;
                     padding:0 10px;
                     .search{
-                        min-width: 190px;
                         span{
                             top: 2px;
                             left: 1px;
@@ -88,6 +87,7 @@ body{
     }
     @include mXs{
         nav.navigation{
+            min-width: 100%;
             .cart-container{
                 width: 100%;
                 min-height:100px;
@@ -118,9 +118,11 @@ body{
             }
         }
         .new-collection{
-            min-width: 570px;
-            .pull-up{
-                margin-top: -40%;
+            .holder-content{
+                width: 570px;
+                .pull-up{
+                    margin-top: -40%;
+                }
             }
         }
     }
