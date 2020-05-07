@@ -14,7 +14,9 @@ searchInput.addEventListener('focus',(e)=>{
 });
 // add blur event
 searchInput.addEventListener('blur',(e)=>{
-    searchClass.style.minWidth = "240px";
+    if(window.screen.width >= '769'){
+        searchClass.style.minWidth = "240px";
+    }
 });
 
 
