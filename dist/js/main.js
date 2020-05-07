@@ -100,4 +100,21 @@ overlay.addEventListener('click', function (event) {
       overlay.classList.remove('overhead');
     }, 400);
   }
+}); // remove items from cart
+// catch remove button
+
+var removeBtn = document.querySelectorAll('nav .cart-container .item .close-x'); // add remove event
+
+removeBtn.forEach(function (btn) {
+  // btn.onclick = (event)=>{
+  //     console.log(event.target.parentElement);
+  // }
+  btn.addEventListener('click', function (event) {
+    if (event.target.parentElement.classList.contains('item')) {
+      console.log('catch item parent', event.target.parentElement);
+      setTimeout(function () {
+        event.target.parentElement.remove();
+      }, 150);
+    }
+  });
 });
