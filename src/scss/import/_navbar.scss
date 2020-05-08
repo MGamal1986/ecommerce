@@ -300,124 +300,125 @@
             }
         }
         // cart container style
-        .cart-container{
-            position: fixed;
-            z-index: 25;
-            top: 0;
-            right: -800px;
-            background: #fff;
-            width: 700px;
-            min-height: 100vh;
-            transition: right 0.7s ease-in-out;
-            &>.cart-icon{
-                span{
-                    z-index: 35;
-                }
-            }
-            &>.close-x{
-                left: 100%;
-                top: -10px;
-                .fa-times{
-                    font-size: 1.5rem;
-                    color: #888;
-                }
-            }
-            &>.cart-items{
-                display: grid;
-                grid-template-columns: repeat(4,1fr);
-                grid-gap: 20px;
-                padding: 2rem 1rem;
-                .item{
-                    transition: all 0.5s ease-in-out;
-                   .close-x{
-                        z-index: 10;
-                        left: 92%;
-                        top: -22px;
-                        background: #fff;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        padding: 0.75rem;
-                        border: 1px solid #ccc;
-                        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
-                        cursor: pointer;
-                        i{
-                            color: #999;
-                            transition: transform 0.3s ease-in-out;
-                        }
-                        // &:hover i{
-                        //     transform: rotateZ(180deg)
-                        // }
-                        &:hover{
-                            box-shadow: none;
-                        }
-                   }
-                   &.remove{
-                       opacity: 0;
-                       visibility: hidden;
-                   }
-                }
-            }
-            &>.cart-summary{
-                padding:2rem 1rem;
-                &>div{
-                    margin-bottom: 2rem;
-                    &:last-child{
-                        margin-bottom: 0
-                    }
-                }
-                .summary-title{
-                    h3{
-                        font-weight: 600;
-                    }
-                }
-                .summary-info{
-                    font-weight: 600;
-                    .summary-list{
-                        margin: 0;
-                        padding: 0;
-                        .summary-item{
-                            display: flex;
-                            justify-content: flex-start;
-                            margin-bottom: 1rem;
-                            &:last-child{
-                                margin-bottom: 0;
-                            }
-                            span:first-child{
-                                margin-right: 1rem;
-                            }
-                        }
-                    }
-                    // table{
-                    //     font-weight: 600;
-                    //     tr{
-                    //         margin-bottom: 0.5rem;
-                    //         display: inline-block;
-                    //         .s-info{
-                    //             padding-right: 10rem;
-                    //         }
-                    //     }
+        @import './cart';
+        // .cart-container{
+        //     position: fixed;
+        //     z-index: 25;
+        //     top: 0;
+        //     right: -800px;
+        //     background: #fff;
+        //     width: 700px;
+        //     min-height: 100vh;
+        //     transition: right 0.7s ease-in-out;
+        //     &>.cart-icon{
+        //         span{
+        //             z-index: 35;
+        //         }
+        //     }
+        //     &>.close-x{
+        //         left: 100%;
+        //         top: -10px;
+        //         .fa-times{
+        //             font-size: 1.5rem;
+        //             color: #888;
+        //         }
+        //     }
+        //     &>.cart-items{
+        //         display: grid;
+        //         grid-template-columns: repeat(4,1fr);
+        //         grid-gap: 20px;
+        //         padding: 2rem 1rem;
+        //         .item{
+        //             transition: all 0.5s ease-in-out;
+        //            .close-x{
+        //                 z-index: 10;
+        //                 left: 92%;
+        //                 top: -22px;
+        //                 background: #fff;
+        //                 border-radius: 50%;
+        //                 width: 20px;
+        //                 height: 20px;
+        //                 padding: 0.75rem;
+        //                 border: 1px solid #ccc;
+        //                 box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+        //                 cursor: pointer;
+        //                 i{
+        //                     color: #999;
+        //                     transition: transform 0.3s ease-in-out;
+        //                 }
+        //                 // &:hover i{
+        //                 //     transform: rotateZ(180deg)
+        //                 // }
+        //                 &:hover{
+        //                     box-shadow: none;
+        //                 }
+        //            }
+        //            &.remove{
+        //                opacity: 0;
+        //                visibility: hidden;
+        //            }
+        //         }
+        //     }
+        //     &>.cart-summary{
+        //         padding:2rem 1rem;
+        //         &>div{
+        //             margin-bottom: 2rem;
+        //             &:last-child{
+        //                 margin-bottom: 0
+        //             }
+        //         }
+        //         .summary-title{
+        //             h3{
+        //                 font-weight: 600;
+        //             }
+        //         }
+        //         .summary-info{
+        //             font-weight: 600;
+        //             .summary-list{
+        //                 margin: 0;
+        //                 padding: 0;
+        //                 .summary-item{
+        //                     display: flex;
+        //                     justify-content: flex-start;
+        //                     margin-bottom: 1rem;
+        //                     &:last-child{
+        //                         margin-bottom: 0;
+        //                     }
+        //                     span:first-child{
+        //                         margin-right: 1rem;
+        //                     }
+        //                 }
+        //             }
+        //             // table{
+        //             //     font-weight: 600;
+        //             //     tr{
+        //             //         margin-bottom: 0.5rem;
+        //             //         display: inline-block;
+        //             //         .s-info{
+        //             //             padding-right: 10rem;
+        //             //         }
+        //             //     }
 
-                    // }
-                }
-                .summary-checkout{
-                    a{
-                        border-radius: 0 !important;
-                        outline: 0;
-                        border: 0;
-                        font-size: 0.9rem;
-                        padding: 0.75rem 2rem;
-                        &:hover{
-                            background: var(--danger);
-                            outline: 0;
-                            border: 0;
-                        }
-                    }
-                }
-            }
-            &.appear{
-                right: 0;
-            }
-        }
+        //             // }
+        //         }
+        //         .summary-checkout{
+        //             a{
+        //                 border-radius: 0 !important;
+        //                 outline: 0;
+        //                 border: 0;
+        //                 font-size: 0.9rem;
+        //                 padding: 0.75rem 2rem;
+        //                 &:hover{
+        //                     background: var(--danger);
+        //                     outline: 0;
+        //                     border: 0;
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     &.appear{
+        //         right: 0;
+        //     }
+        // }
     }
 
