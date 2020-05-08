@@ -22,7 +22,11 @@
             border: 0;
             transition: background 0.3s ease-in-out;
             &:hover{
-                background: var(--red);
+                background: var(--danger);
+            }
+            &:active,
+            &:focus{
+                box-shadow: none !important;
             }
         }
     }

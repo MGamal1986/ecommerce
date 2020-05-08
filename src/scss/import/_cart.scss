@@ -3,13 +3,15 @@
     z-index: 25;
     right: -700px;
     height: 100vh;
-    overflow-y: scroll;
     width: 700px;
     top: 0;
     padding: 2rem;
     background: #fff;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.21);
     transition: right 0.7s ease-in-out;
+    &.more-6{
+        overflow-y: scroll;
+    }
     .cart-items{ 
         .title{
             display: flex;
@@ -18,24 +20,11 @@
             border-bottom: 1px solid rgba(74, 105, 189, 1);
             padding: 1rem 0;
             margin-bottom: 1rem;
-            color: #4a69bd;
+            color: var(--blue);
             h2{
                 margin: 0;
                 align-self: center;
                 font-size: 1.5rem;
-            }
-            .items-no{
-                font-size: 0;
-                .no{
-                    margin-right:0.5rem;
-                }
-                &>span{
-                    font-size: 1.5rem;
-                }
-                font-size: 1rem;
-                font-weight: 500;
-                align-self: center;
-                margin-right: 5rem;
             }
         }
         .item{
@@ -116,19 +105,24 @@
     }
     .checkout{
         padding: 1rem 0;
-        button{
+        a{
             text-transform: capitalize;
-            padding: 0.75rem 1.5rem;
+            padding: .75rem 1.25rem;
+            font-size: 0.9rem;
+            outline: 0;
             border: 0;
             color: #fff;
             border-radius: 0;
             font-weight: 600;
             cursor: pointer;
             transition: background 0.3s ease-in-out;
+            background: var(--blue);
             &:hover{
                 background: var(--danger);
-                outline: 0;
-                border: 0;
+            }
+            &:active,
+            &:focus{
+                box-shadow: none !important;
             }
         }
     }

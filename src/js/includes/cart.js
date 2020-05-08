@@ -45,3 +45,14 @@ removeBtn.forEach((btn)=>{
         event.target.parentElement.parentElement.remove();
     })
 })
+
+// count items in cart
+const cartItems = document.querySelectorAll('nav .cart-container .cart-items .item');
+// after we add event for selecting product we will remove setInterval function
+setInterval(()=>{
+    let cartLength = cartItems.length;
+    if(cartLength >= 6){
+        cartContainer.classList.add('more-6');
+    }
+},300)
+console.log(cartContainer)
