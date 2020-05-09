@@ -2,17 +2,21 @@
 // catch input 
 const searchInput = document.querySelector('.nav-header input');
 const searchClass = searchInput.parentElement;
-// let windowSize;
-// window.addEventListener('load',(event)=>{
-//     windowSize = window.screen.width;
-// })
+let windowSize;
+window.addEventListener('load',(event)=>{
+    windowSize = window.screen.width;
+})
 // add focus event
 searchInput.addEventListener('focus',(e)=>{
-    searchClass.style.minWidth = "440px";
+    if(windowSize > 768){
+        searchClass.style.minWidth = "440px";
+    }
 });
 // add blur event
 searchInput.addEventListener('blur',(e)=>{
-    searchClass.style.minWidth = "240px";
+    if(windowSize > 768){
+        searchClass.style.minWidth = "240px";
+    }
 });
 
 
@@ -72,67 +76,7 @@ listCollect.addEventListener('click',(event)=>{
 });
 
 
-// // open cart page
-// // catch cart element
-// const cartElement = document.querySelector('.nav-header .user .cart');
-// // catch overlay layer
-// const overlay = document.querySelector('nav .overlay');
 
-// // catch cart icon in overlay layer
-// const cartIcon = document.querySelector('nav .cart-container .cart-icon');
-
-// // catch cart contianer in overlay layer
-// const cartContainer = document.querySelector('nav .cart-container');
-// cartElement.addEventListener('click',(event)=>{
-//     overlay.classList.add('overhead');
-//     setTimeout(()=>{
-//         cartContainer.classList.add('appear');
-//     },10)
-    
-// });
-// cartIcon.addEventListener('click',(event)=>{
-    
-//     cartContainer.classList.remove('appear');
-//     setTimeout(()=>{
-//         overlay.classList.remove('overhead');
-//     },400)
-    
-// });
-
-// // catch close x in cart container in samll screen
-// const cartCloseX = document.querySelector('nav .cart-container .close-x');
-// // add click event to close cart pagein samll screen
-
-// cartCloseX.addEventListener('click',(event)=>{
-//     cartContainer.classList.remove('appear');
-//     setTimeout(()=>{
-//         overlay.classList.remove('overhead');
-//     },400)
-// })
-
-// // add click event on overlay layer
-// overlay.addEventListener('click',(event)=>{
-//     if(!event.target.closest('.cart-container')){
-//         cartContainer.classList.remove('appear');
-//         setTimeout(()=>{
-//             overlay.classList.remove('overhead');
-//         },400)
-//     } 
-// })
-
-
-// // remove items from cart
-// // catch remove button
-// const removeBtn = document.querySelectorAll('nav .cart-container .item .close-x i');
-
-// // add remove event
-// removeBtn.forEach((btn)=>{
-//     btn.addEventListener('click',(event)=>{
-//         setTimeout(()=>{
-//             event.target.parentElement.parentElement.classList.add('remove')
-//         },1)
-//     })
-// })
 
 
 

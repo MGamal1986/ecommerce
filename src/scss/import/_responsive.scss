@@ -14,7 +14,7 @@ body{
             }
         }
         .new-collection{
-            .pull-up{
+            .title{
                 .sub-title{
                     margin-bottom: 1rem;
                 }
@@ -66,14 +66,8 @@ body{
             }
         }
         .new-collection{
-            top: 110px;
-            .holder-content{
-                img{
-                    min-height:350px;
-                }
-            }
-            .pull-up{
-                margin-top: -35%;
+            
+            .title{
                 .sub-title{
                     margin-bottom: 0.25rem;
                 }
@@ -107,12 +101,7 @@ body{
             }
         }
         .new-collection{
-            .holder-content{
-                width: 570px;
-                .pull-up{
-                    margin-top: -40%;
-                }
-            }
+            
         }
     }
 }
