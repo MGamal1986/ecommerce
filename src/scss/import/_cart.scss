@@ -17,7 +17,7 @@
             display: flex;
             justify-content: space-between;
             text-transform: capitalize;
-            border-bottom: 1px solid rgba(74, 105, 189, 1);
+            border-bottom: 1px solid var(--blue);
             padding: 1rem 0;
             margin-bottom: 1rem;
             color: var(--blue);
@@ -62,11 +62,14 @@
                 }
                 .price{
                     display: block;
-                    color: red;
+                    color: var(--blue);
+                    font-weight: 600;
                 }
                 .color{
-                    color: #4a69bd;
+                    color: var(--blue);
                     text-transform: capitalize;
+                    opacity: 0.7;
+                    font-size: 0.8rem;
                 }
            }
            .item-control{
@@ -79,13 +82,13 @@
                 .number{
                     width: 50px;
                     margin: 0 0.5rem;
-                    border: 1px solid #4a69bd;
-                    color: #4a69bd;
+                    border: 1px solid var(--blue);
+                    color: var(--blue);
                     font-weight:600;
                     text-align: center;
                 }
                 i{
-                    color: #4a69bd;
+                    color: var(--blue);
                     font-weight: 600;
                     font-size: 1.25rem;
                     padding: 0.5rem;
@@ -96,7 +99,7 @@
                align-self: center;
                justify-self: center ;
                i{
-                    color: red;
+                    color: var(--danger);
                     font-size: 1.5rem;
                     cursor: pointer;
                }
@@ -127,14 +130,17 @@
         }
     }
     &>.close-x{
-        left: 100%;
-        top: -10px;
+        left: 95%;
+        top: 6px;
         .fa-times{
             font-size: 1.5rem;
-            color: #888;
+            color: var(--blue);
         }
     }
     &.appear{
         right: 0;
+    }
+    @media screen and (max-width:450px){
+        min-width: 450px;
     }
 }

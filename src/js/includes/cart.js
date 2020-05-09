@@ -55,4 +55,26 @@ setInterval(()=>{
         cartContainer.classList.add('more-6');
     }
 },300)
-console.log(cartContainer)
+
+// increment and decrement items in cart
+// catch input field
+const itemInput = document.querySelector('nav .cart-container .item .number');
+// catch button
+const incrementBtn = document.querySelectorAll('nav .cart-container .item .fa-plus');
+const decrementBtn = document.querySelectorAll('nav .cart-container .item .fa-minus');
+
+// add increment event
+incrementBtn.forEach((btn)=>{
+    btn.addEventListener('click',(event)=>{
+        event.target.previousElementSibling.value++
+    })
+})
+
+// add decrement event
+decrementBtn.forEach((btn)=>{
+    btn.addEventListener('click',(event)=>{
+        if(event.target.nextElementSibling.value > 0){
+            event.target.nextElementSibling.value--
+        }
+    })
+})

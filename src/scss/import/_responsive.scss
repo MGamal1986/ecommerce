@@ -11,7 +11,6 @@ body{
                 grid-template-columns: 1fr 4fr;
             }
             .cart-container{
-                width: 550px;
             }
         }
         .new-collection{
@@ -63,7 +62,7 @@ body{
                 }
             }
             .cart-container{
-                width: 400px;
+                width: 100%;
             }
         }
         .new-collection{
@@ -87,34 +86,24 @@ body{
     }
     @include mXs{
         nav.navigation{
-            min-width: 100%;
             .cart-container{
-                width: 100%;
                 min-height:100px;
                 display: block;
                 padding: 2.5rem;
                 .cart-items{
-                    display: grid;
-                    grid-template-columns: repeat(3,3fr);
-                    grid-gap: 20px;
-                    overflow-y: none;
                     .item{
-                        .description{
-                            padding: 1rem 0.8rem;
-                            &>div{
-                                margin-bottom: 0 !important;
+                        grid-template-columns: 2fr 5fr 2fr;
+                        .item-desc{
+                            .color{
+                                display: none;
                             }
                         }
-                    }
-                }
-                .cart-summary{
-                    &>div{
-                        margin-bottom: 0.5rem;
-                        &:last-child{
-                            margin-bottom: 0
+                        .remove{
+                            display: none;
                         }
                     }
                 }
+                
             }
         }
         .new-collection{
