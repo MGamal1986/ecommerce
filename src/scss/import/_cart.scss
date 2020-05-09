@@ -45,6 +45,9 @@
             grid-template-columns:1fr 5fr 3fr 1fr;
             grid-auto-rows: 95px;
             position: relative;
+            @media screen and (max-width:450px){
+                grid-template-columns:2fr 4fr;
+            }
 
            .item-img{
                padding: 0.5rem;
@@ -94,6 +97,9 @@
                     padding: 0.5rem;
                     cursor: pointer;
                 }
+                @media screen and (max-width:450px){
+                    display: none;
+                }
            }
            .remove{
                align-self: center;
@@ -140,7 +146,5 @@
     &.appear{
         right: 0;
     }
-    @media screen and (max-width:450px){
-        min-width: 450px;
-    }
+    
 }
