@@ -145,12 +145,25 @@
                     .list{
                         padding-top:6rem;
                        .list-item{
-                           background: $expandMenuColor;
-                           padding:0.5rem;
-                           border-bottom: 1px solid #fff;
-                           color: inherit;
-                           font-size: inherit;
-                           font-weight: inherit;
+                            background: $expandMenuColor;
+                            padding:0.5rem;
+                            border-bottom: 1px solid #fff;
+                            color: inherit;
+                            font-size: inherit;
+                            font-weight: inherit;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+                            &.pages,
+                            &.collections{
+                                &.open{
+                                    background: var(--blue);
+                                    color: #fff;
+                                }
+                            }
+                            &:hover{
+                                background: var(--blue);
+                                color: #fff;
+                            }
                        } 
                        .menu{
                             background: $bgColor;

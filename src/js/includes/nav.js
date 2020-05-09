@@ -59,8 +59,9 @@ const subMenu = document.querySelector('.navbar-list .expand-menu .menu');
 // catch pages list item
 const listPages = document.querySelector('.navbar-list .expand-menu .pages');
 
-listPages.addEventListener('click', e =>{
+listPages.addEventListener('click', (event) =>{
     subMenu.classList.toggle('expand');
+    event.target.classList.toggle('open');
 });
 
 // catch collection list item
@@ -72,6 +73,7 @@ const collectionSubMenu = document.querySelector('.navbar-list .expand-menu .men
 
 listCollect.addEventListener('click',(event)=>{
     collectionSubMenu.classList.toggle('expand');
+    event.target.classList.toggle('open');
     expanMenu.classList.toggle('scroll-y');
 });
 
