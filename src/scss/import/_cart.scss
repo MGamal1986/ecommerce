@@ -9,6 +9,7 @@
     background: #fff;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.21);
     transition: right 0.7s ease-in-out;
+    overflow-y: scroll;
     &.more-6{
         overflow-y: scroll;
     }
