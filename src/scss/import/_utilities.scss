@@ -75,9 +75,10 @@
 }
 // close-x class
 .close-x{
-    position: relative;
     .fa-times{
         cursor: pointer;
+        color: inherit;
+        font-size: inherit;
     }
 }
 
