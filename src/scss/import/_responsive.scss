@@ -10,8 +10,7 @@ body{
             .nav-header{
                 grid-template-columns: 1fr 4fr;
             }
-            .cart-container{
-            }
+            
         }
         .new-collection{
             .title{
@@ -61,14 +60,8 @@ body{
                     }
                 }
             }
-            .cart-container{
-                width: 100%;
-                overflow-y: scroll;
-                overflow-x: hidden;
-            }
         }
         .new-collection{
-            
             .title{
                 .sub-title{
                     margin-bottom: 0.25rem;
@@ -88,25 +81,6 @@ body{
                         min-width: 184px;
                     }
                 }    
-            }
-            .cart-container{
-                min-height:100px;
-                display: block;
-                padding: 2.5rem;
-                .cart-items{
-                    .item{
-                        grid-template-columns: 2fr 5fr 2fr;
-                        .item-desc{
-                            .color{
-                                display: none;
-                            }
-                        }
-                        .remove{
-                            display: none;
-                        }
-                    }
-                }
-                
             }
         }
     }
