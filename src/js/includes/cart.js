@@ -3,22 +3,24 @@
 const cartIcon = document.querySelector('.nav-header .user .cart');
 // catch cart section
 const cartContainer = document.querySelector('.nav-header .user .cart .cart-container');
-console.log(cartIcon,cartContainer);
 // add mouseover event
-cartIcon.addEventListener('mouseover',(event)=>{
-    cartContainer.classList.add('hover-cart');
-})
+// cartIcon.addEventListener('mouseover',(event)=>{
+//     cartContainer.classList.add('hover-cart');
+// })
 
-cartIcon.addEventListener('mouseleave',(event)=>{
-    cartContainer.classList.remove('hover-cart');
-    cartContainer.classList.remove('hover-cart-sm');
+// cartIcon.addEventListener('mouseleave',(event)=>{
+//     cartContainer.classList.remove('hover-cart');
+//     cartContainer.classList.remove('hover-cart-sm');
+// })
+cartIcon.addEventListener('click',(event)=>{
+    cartContainer.classList.toggle('hover-cart');
 })
-
 // remove items form cart
 // catch close btn for each item
 const cartIconClose = document.querySelectorAll('.nav-header .user .cart .close-x');
 cartIconClose.forEach((close)=>{
     close.onclick = (event)=>{
+        event.stopPropagation();
         event.target.parentElement.parentElement.remove();
     }
 })
@@ -41,6 +43,15 @@ decrementBtn.forEach((btn)=>{
         if(event.target.nextElementSibling.textContent > 0 ){
             event.target.nextElementSibling.textContent --;
         }
+    }
+})
+
+// stop propagation of buttons in checkout section in cart
+// catch links in checkout in cart
+const checkoutBtns = document.querySelectorAll('.nav-header .user .cart .checkout a');
+checkoutBtns.forEach((btn)=>{
+    btn.onclick = (event)=>{
+        event.stopPropagation();
     }
 })
 
