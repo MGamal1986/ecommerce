@@ -10,6 +10,11 @@
     transition: all 0.5s ease-in-out;
     background: #fff;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.21);
+    &.hover-cart{
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+    }
     .cart-items{
         .item{
             position: relative;

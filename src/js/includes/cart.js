@@ -1,3 +1,19 @@
+// hover on cart icon to popup cart section
+// catch cart icon
+const cartIcon = document.querySelector('.nav-header .user .cart');
+// catch cart section
+const cartContainer = document.querySelector('.nav-header .user .cart .cart-container');
+console.log(cartIcon,cartContainer);
+// add mouseover event
+cartIcon.addEventListener('mouseover',(event)=>{
+    cartContainer.classList.add('hover-cart');
+})
+
+cartIcon.addEventListener('mouseleave',(event)=>{
+    cartContainer.classList.remove('hover-cart');
+    cartContainer.classList.remove('hover-cart-sm');
+})
+
 // remove items form cart
 // catch close btn for each item
 const cartIconClose = document.querySelectorAll('.nav-header .user .cart .close-x');
