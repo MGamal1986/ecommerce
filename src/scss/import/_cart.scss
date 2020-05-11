@@ -10,12 +10,6 @@
     transition: all 0.5s ease-in-out;
     background: #fff;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.21);
-    cursor: default;
-    // &.expand{
-    //     visibility: visible;
-    //     opacity: 1;
-    //     top: 100%;
-    // }
     .cart-items{
         .item{
             position: relative;
@@ -76,14 +70,20 @@
             border-radius: 0;
             text-transform: capitalize;
             outline: 0;
-            border: 0;
-            &.btn-primary:hover{
-                background: var(--danger);
+            // border: 0;
+            &.btn-primary{
+                border-color: var(--blue);
+                &:hover{
+                    background: var(--danger);
+                    border-color: var(--danger);
+                }
             }
-            &.btn-secondary:hover{
-                background: var(--light);
-                color: var(--gray);
-                border: 1px solid var(--gray);
+            &.btn-secondary{
+                &:hover{
+                    background: var(--light);
+                    color: var(--gray);
+                    border: 1px solid var(--gray);
+                }
             }
             &:active,
             &:focus{
