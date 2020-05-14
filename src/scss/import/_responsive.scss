@@ -3,7 +3,18 @@ body{
     
     }
     @include mLg{
-      
+        .categories{
+            .head-section{
+                font-size: 2.5rem;
+            }
+        }
+        .global-sale{
+            .sale{
+                .sale-content{
+                    margin-right: 7rem;
+                }
+            }
+        }
     }
     @include mMd{
         nav.navigation{
@@ -20,6 +31,23 @@ body{
                 .main-title{
                     margin-bottom: 2rem;
                     font-size:2.5rem;
+                }
+            }
+        }
+        .categories{
+            .head-section{
+                font-size: 2rem;
+            }
+            .clothes,
+            .shoses,
+            .accessories{
+                height: 250px;
+            }
+        }
+        .global-sale{
+            .sale{
+                .sale-content{
+                    margin-right: 1rem;
                 }
             }
         }
@@ -92,6 +120,33 @@ body{
                 }
             }
         }
+        .categories{
+            .head-section{
+                font-size: 2rem;
+            }
+            .clothes,
+            .shoses{
+                margin-bottom: 1rem
+            }
+        }
+        .global-sale{
+            .sale{
+                height: 400px;
+                .sale-content{
+                    margin-right: 0;
+                    .sale-discount{
+                        font-size: 1rem;
+                    }
+                    .sale-title{
+                        font-size: 2.5rem;
+                    }
+                    a{
+                        padding: 0.25rem 1rem;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
     }
     @include mXs{
         nav.navigation{
@@ -103,5 +158,10 @@ body{
                 }    
             }
         }
+        .clothes,
+            .shoses,
+            .accessories{
+                height: 300px;
+            }
     }
 }

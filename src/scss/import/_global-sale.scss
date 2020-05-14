@@ -1,0 +1,36 @@
+.global-sale{
+    .sale{
+        height: 500px;
+        background: url('../img/bg-img/bg-5.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        .sale-content{
+            margin-right: 13rem;
+            .sale-discount{
+                color: var(--danger);
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+            .sale-title{
+                margin: 0;
+                font-weight: 600;
+                font-size: 4rem;
+            }
+            a{
+                border-radius: 0;
+                font-weight: 600;
+                padding: 0.75rem 3.5rem;
+                font-size: 0.95rem;
+                transition: all 0.3s ease-in-out;
+                border: none;
+                &:focus{
+                    box-shadow:none;
+                }
+                &:hover{
+                    background: var(--danger)
+                }
+
+            }
+        }
+    }
+}
