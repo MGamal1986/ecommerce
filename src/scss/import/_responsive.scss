@@ -47,7 +47,13 @@ body{
         .global-sale{
             .sale{
                 .sale-content{
-                    margin-right: 1rem;
+                    margin-right: 5rem;
+                    .sale-discount{
+                    }
+                    .sale-title{
+                        font-size: 2.5rem;
+                    }
+
                 }
             }
         }
@@ -116,7 +122,7 @@ body{
                 }
                 .main-title{
                     margin-bottom: 1rem;
-                    font-size:1.5rem;
+                    font-size: 2.5rem;
                 }
             }
         }
@@ -133,16 +139,12 @@ body{
             .sale{
                 height: 400px;
                 .sale-content{
-                    margin-right: 0;
+                    margin-right: 4rem;
                     .sale-discount{
                         font-size: 1rem;
                     }
                     .sale-title{
                         font-size: 2.5rem;
-                    }
-                    a{
-                        padding: 0.25rem 1rem;
-                        font-size: 0.75rem;
                     }
                 }
             }
@@ -158,10 +160,19 @@ body{
                 }    
             }
         }
-        .clothes,
+        .categories{
+            .clothes,
             .shoses,
             .accessories{
                 height: 300px;
             }
+        }
+        .global-sale{
+            .sale{
+                .sale-content{
+                    margin-right:0;
+                }
+            }
+        }
     }
 }
