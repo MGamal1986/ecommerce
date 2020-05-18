@@ -91,6 +91,7 @@ body{
                     }
                     &>div{
                         padding: 1.5rem;
+                        border-left: 1px solid rgba(0,0,0,.1);
                         &.cart{
                             border-right: 1px solid rgba(0,0,0,.1);
                             .no-of-items{
