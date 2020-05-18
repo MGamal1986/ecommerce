@@ -2,10 +2,11 @@
     container: '.slider-container',
     controls : false,
     nav: false,
-    autoplay: true,
+    autoplay: false,
     mouseDrag : true,
     loop : true,
-    speed : 400,
+    speed : 300,
+    gutter: 20,
     responsive: {
         993: {
           items: 4
