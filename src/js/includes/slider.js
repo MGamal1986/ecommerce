@@ -3,8 +3,8 @@
     controls : false,
     nav: false,
     autoplay: true,
+    rewind: true,
     mouseDrag : true,
-    loop : true,
     speed : 300,
     gutter: 20,
     responsive: {
