@@ -24,13 +24,19 @@
                 top: 12px;
                 right: 30px;
                 cursor: pointer;
-                box-shadow: 0 0 5px 0 rgba($secondaryColor, 0.79);
                 background: #fff;
                 border-radius: 5px;
                 i{
                     color: #ccc;
                     font-size: .9rem;
                     padding: 0.35rem 1rem
+                }
+                &.selected{
+                    visibility: visible;
+                    opacity: 1;
+                    i{
+                        color: $secondaryColor;
+                    }
                 }
                 visibility: hidden;
                 opacity: 0;
@@ -43,7 +49,6 @@
                 cursor: pointer;
                 display: inline-block;
                 background: #fff;
-                box-shadow: 0 0 5px 0 rgba($mainColor, 0.79);
                 border-radius: 5px;
                 i{
                     color: #ccc;
@@ -53,9 +58,17 @@
                 visibility: hidden;
                 opacity: 0;
                 transition: all 0.3s ease-in-out;
+                &.selected{
+                    visibility: visible;
+                    opacity: 1;
+                    i{
+                        color: $mainColor;
+                    }
+                }
+
             }
-            &:hover .wishlist,
-            &:hover .add-card{
+            &:hover .wishlist:not(.selected),
+            &:hover .add-card:not(.selected){
                 visibility: visible;
                 opacity: 1;
             }
