@@ -77,6 +77,26 @@ listCollect.addEventListener('click',(event)=>{
     expanMenu.classList.toggle('scroll-y');
 });
 
+// add click event on search icon to open search overlay
+// catch search icon element
+const searchIcon = document.querySelector('nav .user .seacrh-icon');
+
+// catch search overlay layer
+const searchOverlay = document.querySelector('nav .user .search-overlay')
+// add click event
+searchIcon.onclick = (event)=>{
+    searchOverlay.classList.add('face');
+}
+
+// remove search overlay layer
+// catch close button 
+const closeBtn = document.querySelector('nav .user .search-overlay .close-x');
+// add click event
+closeBtn.addEventListener('click',(event)=>{
+    searchOverlay.classList.remove('face')
+})
+
+
 
 
 
