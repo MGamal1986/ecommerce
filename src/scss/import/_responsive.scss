@@ -55,6 +55,13 @@ body{
                 }
             }
         }
+        .top-brands{
+            .brand{
+                img{
+                    width: 70%;
+                }
+            }
+        }
     }
     @include mSm{
         nav.navigation{
@@ -184,6 +191,13 @@ body{
             .sale{
                 .sale-content{
                     margin-right:0;
+                }
+            }
+        }
+        .top-brands{
+            .brand{
+                img{
+                    width: 80%;
                 }
             }
         }

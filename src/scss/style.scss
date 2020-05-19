@@ -13,7 +13,9 @@ body{
     @import 'import/categores';
     @import 'import/global-sale';
     @import 'import/popular-products';
-    min-height:2500px;
+    @import 'import/brands';
+
+    min-height:4500px;
     overflow-x: hidden;
     padding-top: 73px;
 }
