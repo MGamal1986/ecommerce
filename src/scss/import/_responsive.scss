@@ -169,6 +169,25 @@ body{
                 }
             }
         }
+        footer{
+            .pages{
+               margin-bottom: 1.5rem;
+            }
+            .order-status,
+            .payment-option{
+                margin-bottom: 1.5rem;
+            }
+            .subscribe{
+               
+            }
+            .social-links{
+               
+            }
+            .copy-right{
+            
+            }
+            
+        }
     }
     @include mXs{
         nav.navigation{
