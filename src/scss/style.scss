@@ -9,6 +9,7 @@
 body{
     font-family: "Poppins", sans-serif;
     @import 'import/navbar';
+    @import 'import/scrollup';
     @import 'import/new-collection';
     @import 'import/categores';
     @import 'import/global-sale';
