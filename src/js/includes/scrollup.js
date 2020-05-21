@@ -4,14 +4,15 @@ const scrollBtn = document.querySelector('#scrollup');
 // add scroll event
 
 window.onscroll = (event)=>{
-    if(document.documentElement.scrollTop > 350){
+    if(document.documentElement.scrollTop > 350 || document.body.scrollTop > 350){
         scrollBtn.classList.add('view');
     }else{
         scrollBtn.classList.remove('view');
     }
 }
-document.documentElement.classList.add('scroll-smooth');
-// add click event on scrollup button
-scrollBtn.onclick = (event)=>{
-    document.documentElement.scrollTop = 0;
-}
+
+let scroll = new SmoothScroll('#scrollup', {
+    speed: 600
+});
+
+

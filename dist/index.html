@@ -1,607 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- include tiny slide css file -->
-    <link rel="stylesheet" href="css/vendor/tiny-slider.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- include tiny slide css file -->
+        <link rel="stylesheet" href="css/vendor/tiny-slider.css">
 
-    <!-- include bootstrap file-->
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <!-- include bootstrap file-->
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
 
-    <!-- include fontawsome v5 -->
-    <link rel="stylesheet" href="css/vendor/all.css">
+        <!-- include fontawsome v5 -->
+        <link rel="stylesheet" href="css/vendor/all.css">
 
-    <!-- main stylesheet remove rel attribute as we include minified file -->
-    <link  rel="stylesheet" href="css/style..min.css" type="text/css" >
-    <title>Online Shop</title>
-</head>
-<body>
-    <!-- start navigation -->
-    <nav class="navigation">
-        <div class="nav-header">
-            <!-- navbar section -->
-            <div class="navbar-list d-flex">
-                <div class="logo text-uppercase align-self-center">
-                    <span>essence</span>
-                </div>
-                <ul class="nav-list text-capitalize align-self-center d-none d-lg-block  d-xl-block">
-                    <li class="nav-item down collections">
-                        shop
-                        <div class="menu-collections">
-                            <div class="collection">
-                                <h5 class="collection-title">
-                                    woman's collection
-                                </h5>
-                                <ul class="collection-list list-unstyled">
-                                    <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">blouses & shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">rompers</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">bars & panties</a></li>
-                                </ul>
-                            </div>
-                            <div class="collection">
-                                <h4 class="collection-title">
-                                    men's collection
-                                </h4>
-                                <ul class="collection-list list-unstyled">
-                                    <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">polo</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">trench</a></li>
-                                </ul>
-                            </div>
-                            <div class="collection">
-                                <h4 class="collection-title">
-                                    kid's collection
-                                </h4>
-                                <ul class="collection-list list-unstyled">
-                                    <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">trench</a></li>
-                                </ul>
-                            </div>
-                            <div class="collection image">
-                               <img src="img/bg-img/bg-6.jpg" alt="image">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item down pages">
-                        pages
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">home</a>
-                            <a class="dropdown-item" href="#">shop</a>
-                            <a class="dropdown-item" href="#">product details</a>
-                            <a class="dropdown-item" href="#">checkout</a>
-                            <a class="dropdown-item" href="#">blog</a>
-                            <a class="dropdown-item" href="#">single blog</a>
-                            <a class="dropdown-item" href="#">regular page</a>
-                            <a class="dropdown-item" href="#">contact</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">blog</li>
-                    <li class="nav-item">contact</li>
-                </ul>
-                <div class="expand-icon d-block d-lg-none d-xl-none">
-                    <i class="fas fa-bars fa-2x"></i>
-                </div>
-                <div class="expand-menu">
-                    <ul class="list text-capitalize list-unstyled">
-                        <li class="list-item down-space collections">
+        <!-- main stylesheet remove rel attribute as we include minified file -->
+        <link  rel="stylesheet" href="css/style..min.css" type="text/css" >
+        <title>Online Shop</title>
+    </head>
+    <body id="top"> 
+        <!-- start navigation -->
+        <nav class="navigation">
+            <div class="nav-header">
+                <!-- navbar section -->
+                <div class="navbar-list d-flex">
+                    <div class="logo text-uppercase align-self-center">
+                        <span>essence</span>
+                    </div>
+                    <ul class="nav-list text-capitalize align-self-center d-none d-lg-block  d-xl-block">
+                        <li class="nav-item down collections">
                             shop
+                            <div class="menu-collections">
+                                <div class="collection">
+                                    <h5 class="collection-title">
+                                        woman's collection
+                                    </h5>
+                                    <ul class="collection-list list-unstyled">
+                                        <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">blouses & shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">rompers</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">bars & panties</a></li>
+                                    </ul>
+                                </div>
+                                <div class="collection">
+                                    <h4 class="collection-title">
+                                        men's collection
+                                    </h4>
+                                    <ul class="collection-list list-unstyled">
+                                        <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">polo</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">trench</a></li>
+                                    </ul>
+                                </div>
+                                <div class="collection">
+                                    <h4 class="collection-title">
+                                        kid's collection
+                                    </h4>
+                                    <ul class="collection-list list-unstyled">
+                                        <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">trench</a></li>
+                                    </ul>
+                                </div>
+                                <div class="collection image">
+                                <img src="img/bg-img/bg-6.jpg" alt="image">
+                                </div>
+                            </div>
                         </li>
-                        <div class="menu-collections">
-                            <div class="collection">
-                                <h5 class="collection-title">
-                                    woman's collection
-                                </h5>
-                                <ul class="collection-list list-unstyled">
-                                    <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">blouses & shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">rompers</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">bars & panties</a></li>
-                                </ul>
-                            </div>
-                            <div class="collection">
-                                <h4 class="collection-title">
-                                    men's collection
-                                </h4>
-                                <ul class="collection-list list-unstyled">
-                                    <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">polo</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">trench</a></li>
-                                </ul>
-                            </div>
-                            <div class="collection">
-                                <h4 class="collection-title">
-                                    kid's collection
-                                </h4>
-                                <ul class="collection-list list-unstyled">
-                                    <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
-                                    <li class="collection-item"><a href="" class="collection-link">trench</a></li>
-                                </ul>
-                            </div>
-                            <div class="collection image">
-                               <img src="img/bg-img/bg-6.jpg" alt="image">
-                            </div>
-                        </div>
-                        <li class="list-item down-space pages">
+                        <li class="nav-item down pages">
                             pages
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">home</a>
+                                <a class="dropdown-item" href="#">shop</a>
+                                <a class="dropdown-item" href="#">product details</a>
+                                <a class="dropdown-item" href="#">checkout</a>
+                                <a class="dropdown-item" href="#">blog</a>
+                                <a class="dropdown-item" href="#">single blog</a>
+                                <a class="dropdown-item" href="#">regular page</a>
+                                <a class="dropdown-item" href="#">contact</a>
+                            </div>
                         </li>
-                        <div class="menu">
-                            <a href="#">home</a>
-                            <a href="#">shop</a>
-                            <a href="#">product details</a>
-                            <a href="#">checkout</a>
-                            <a href="#">blog</a>
-                            <a href="#">single blog</a>
-                            <a href="#">regular page</a>
-                            <a href="#">contact</a>
-                        </div>
-                        <li class="list-item">blog</li>
-                        <li class="list-item">contact</li>
+                        <li class="nav-item">blog</li>
+                        <li class="nav-item">contact</li>
                     </ul>
+                    <div class="expand-icon d-block d-lg-none d-xl-none">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </div>
+                    <div class="expand-menu">
+                        <ul class="list text-capitalize list-unstyled">
+                            <li class="list-item down-space collections">
+                                shop
+                            </li>
+                            <div class="menu-collections">
+                                <div class="collection">
+                                    <h5 class="collection-title">
+                                        woman's collection
+                                    </h5>
+                                    <ul class="collection-list list-unstyled">
+                                        <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">blouses & shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">rompers</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">bars & panties</a></li>
+                                    </ul>
+                                </div>
+                                <div class="collection">
+                                    <h4 class="collection-title">
+                                        men's collection
+                                    </h4>
+                                    <ul class="collection-list list-unstyled">
+                                        <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">polo</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">trench</a></li>
+                                    </ul>
+                                </div>
+                                <div class="collection">
+                                    <h4 class="collection-title">
+                                        kid's collection
+                                    </h4>
+                                    <ul class="collection-list list-unstyled">
+                                        <li class="collection-item"><a href="" class="collection-link">dresses</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">t-shirts</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">jackets</a></li>
+                                        <li class="collection-item"><a href="" class="collection-link">trench</a></li>
+                                    </ul>
+                                </div>
+                                <div class="collection image">
+                                <img src="img/bg-img/bg-6.jpg" alt="image">
+                                </div>
+                            </div>
+                            <li class="list-item down-space pages">
+                                pages
+                            </li>
+                            <div class="menu">
+                                <a href="#">home</a>
+                                <a href="#">shop</a>
+                                <a href="#">product details</a>
+                                <a href="#">checkout</a>
+                                <a href="#">blog</a>
+                                <a href="#">single blog</a>
+                                <a href="#">regular page</a>
+                                <a href="#">contact</a>
+                            </div>
+                            <li class="list-item">blog</li>
+                            <li class="list-item">contact</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- user search and interaction section -->
+                <div class="user">
+                    <form action="" class="search d-none d-md-block">
+                        <span><i class="fas fa-search"></i></span>
+                        <input type="text" name="search" placeholder="type for search" class="form-control">
+                    </form>
+                    <div class="seacrh-icon d-block d-md-none">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="search-overlay d-flex justify-content-center align-items-center">
+                        <div class="close-x">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <input type="text" name="search" class='form-control'>
+                    </div>
+                    <div class="like">
+                        <i class="far fa-heart"></i>
+                        <span class="no-of-items">3</span>
+                        <div class="wish-container">
+                            <div class="wish-items">
+                                <div class="item">
+                                    <div class="close-x">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div class="item-img">
+                                        <img src="img/product-img/product-1.jpg" alt="product-1">
+                                    </div>
+                                    <div class="item-desc">
+                                        <h4 class="title">Addidas</h4>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="close-x">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div class="item-img">
+                                        <img src="img/product-img/product-2.jpg" alt="product-1">
+                                    </div>
+                                    <div class="item-desc">
+                                        <h4 class="title">Addidas</h4>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="close-x">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div class="item-img">
+                                        <img src="img/product-img/product-3.jpg" alt="product-1">
+                                    </div>
+                                    <div class="item-desc">
+                                        <h4 class="title">Addidas</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout">
+                                <a href="cart.html" class="btn btn-primary">checkout</a>
+                                <a href="#" class="btn btn-secondary">view cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="no-of-items">3</span>
+                        <div class="cart-container">
+                            <div class="cart-items">
+                                <div class="item">
+                                    <div class="close-x">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div class="item-img">
+                                        <img src="img/product-img/product-1.jpg" alt="product-1">
+                                    </div>
+                                    <div class="item-desc">
+                                        <h4 class="title">Addidas</h4>
+                                        <i class="fas fa-minus"></i>
+                                        <span class="number">1</span>
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="close-x">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div class="item-img">
+                                        <img src="img/product-img/product-2.jpg" alt="product-1">
+                                    </div>
+                                    <div class="item-desc">
+                                        <h4 class="title">Addidas</h4>
+                                        <i class="fas fa-minus"></i>
+                                        <span class="number">1</span>
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="close-x">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div class="item-img">
+                                        <img src="img/product-img/product-3.jpg" alt="product-1">
+                                    </div>
+                                    <div class="item-desc">
+                                        <h4 class="title">Addidas</h4>
+                                        <i class="fas fa-minus"></i>
+                                        <span class="number">1</span>
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout">
+                                <a href="cart.html" class="btn btn-primary">checkout</a>
+                                <a href="#" class="btn btn-secondary">view cart</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- user search and interaction section -->
-            <div class="user">
-                <form action="" class="search d-none d-md-block">
-                    <span><i class="fas fa-search"></i></span>
-                    <input type="text" name="search" placeholder="type for search" class="form-control">
-                </form>
-                <div class="seacrh-icon d-block d-md-none">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="search-overlay d-flex justify-content-center align-items-center">
-                    <div class="close-x">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <input type="text" name="search" class='form-control'>
-                </div>
-                <div class="like">
-                    <i class="far fa-heart"></i>
-                    <span class="no-of-items">3</span>
-                    <div class="wish-container">
-                        <div class="wish-items">
-                            <div class="item">
-                                <div class="close-x">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                                <div class="item-img">
-                                    <img src="img/product-img/product-1.jpg" alt="product-1">
-                                </div>
-                                <div class="item-desc">
-                                    <h4 class="title">Addidas</h4>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="close-x">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                                <div class="item-img">
-                                    <img src="img/product-img/product-2.jpg" alt="product-1">
-                                </div>
-                                <div class="item-desc">
-                                    <h4 class="title">Addidas</h4>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="close-x">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                                <div class="item-img">
-                                    <img src="img/product-img/product-3.jpg" alt="product-1">
-                                </div>
-                                <div class="item-desc">
-                                    <h4 class="title">Addidas</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="checkout">
-                            <a href="cart.html" class="btn btn-primary">checkout</a>
-                            <a href="#" class="btn btn-secondary">view cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="account">
-                    <i class="far fa-user"></i>
-                </div>
-                <div class="cart">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="no-of-items">3</span>
-                    <div class="cart-container">
-                        <div class="cart-items">
-                            <div class="item">
-                                <div class="close-x">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                                <div class="item-img">
-                                    <img src="img/product-img/product-1.jpg" alt="product-1">
-                                </div>
-                                <div class="item-desc">
-                                    <h4 class="title">Addidas</h4>
-                                    <i class="fas fa-minus"></i>
-                                    <span class="number">1</span>
-                                    <i class="fas fa-plus"></i>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="close-x">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                                <div class="item-img">
-                                    <img src="img/product-img/product-2.jpg" alt="product-1">
-                                </div>
-                                <div class="item-desc">
-                                    <h4 class="title">Addidas</h4>
-                                    <i class="fas fa-minus"></i>
-                                    <span class="number">1</span>
-                                    <i class="fas fa-plus"></i>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="close-x">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                                <div class="item-img">
-                                    <img src="img/product-img/product-3.jpg" alt="product-1">
-                                </div>
-                                <div class="item-desc">
-                                    <h4 class="title">Addidas</h4>
-                                    <i class="fas fa-minus"></i>
-                                    <span class="number">1</span>
-                                    <i class="fas fa-plus"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="checkout">
-                            <a href="cart.html" class="btn btn-primary">checkout</a>
-                            <a href="#" class="btn btn-secondary">view cart</a>
+        </nav>
+        <!-- End navigation -->
+
+        <!-- scoll to top button -->
+        <a id="scrollup" href="#top">up</a>
+
+        <!-- start new collection section -->
+        <div class="new-collection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="title">
+                            <span class="sub-title d-block">asoss</span>
+                            <h1 class="main-title text-capitalize ">new collection</h1>
+                            <a href="#" class="view btn btn-primary text-uppercase"> view collection</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
-    <!-- End navigation -->
+        <!-- end new collection section --> 
 
-    <!-- scoll to top button -->
-    <button id="scrollup">up</button>
-
-    <!-- start new collection section -->
-    <div class="new-collection">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="title">
-                        <span class="sub-title d-block">asoss</span>
-                        <h1 class="main-title text-capitalize ">new collection</h1>
-                        <a href="#" class="view btn btn-primary text-uppercase"> view collection</a>
+        <!-- start categories section -->
+        <div class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="clothes pos-rel d-flex justify-content-center align-items-center">
+                            <h4 class="head-section text-capitalize">clothes</h4>
+                            <div class="category-overlay">
+                                <h4 class="subhead-section">clothes</h4>
+                                <ul class="list list-unstyled">
+                                    <li class="list-item">men's collections</li>
+                                    <li class="list-item">women's collections</li>
+                                    <li class="list-item">kid's collections</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="shoses pos-rel d-flex justify-content-center align-items-center">
+                            <h4 class="head-section text-capitalize">shoses</h4>
+                            <div class="category-overlay">
+                                <h4 class="subhead-section">shoses</h4>
+                                <ul class="list list-unstyled">
+                                    <li class="list-item">men's collections</li>
+                                    <li class="list-item">women's collections</li>
+                                    <li class="list-item">kid's collections</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="accessories pos-rel d-flex justify-content-center align-items-center">
+                            <h4 class="head-section text-capitalize">accessories</h4>
+                            <div class="category-overlay">
+                                <h4 class="subhead-section">accessories</h4>
+                                <ul class="list list-unstyled">
+                                    <li class="list-item">men's collections</li>
+                                    <li class="list-item">women's collections</li>
+                                    <li class="list-item">kid's collections</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- end new collection section --> 
+        <!-- End category section -->
 
-    <!-- start categories section -->
-    <div class="categories">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="clothes pos-rel d-flex justify-content-center align-items-center">
-                        <h4 class="head-section text-capitalize">clothes</h4>
-                        <div class="category-overlay">
-                            <h4 class="subhead-section">clothes</h4>
+        <!-- Start glonal sale section -->
+        <div class="global-sale">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="sale d-flex justify-content-end align-items-center">
+                            <div class="sale-content">
+                                <span class="sale-discount mb-1 d-block">-60%</span>
+                                <h4 class="sale-title text-capitalize mb-5">global sale</h4>
+                                <a href="#!" class="btn btn-primary text-capitalize">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End glonal sale section -->
+
+        <!-- start popular products -->
+        <div class="popular-products">
+            <h2 class="popular-products-title">popular products</h2>
+            <div class="container">
+                <div class="slider-container">
+                    <div class="card new">
+                        <img src="img/product-img/product-1.jpg" class="card-img-top" alt="product 1">
+                        <div class="wishlist">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="add-card">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="card-body text-left">
+                            <span class="brand text-uppercase">mango</span>
+                            <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                    <div class="card discount">
+                        <div class="discount-text">-30%</div>
+                        <img src="img/product-img/product-2.jpg" class="card-img-top" alt="product 1">
+                        <div class="wishlist">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="add-card">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="card-body text-left">
+                            <span class="brand text-uppercase">mango</span>
+                            <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/product-img/product-3.jpg" class="card-img-top" alt="product 1">
+                        <div class="wishlist">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="add-card">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="card-body text-left">
+                            <span class="brand text-uppercase">mango</span>
+                            <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                    <div class="card discount">
+                        <div class="discount-text">-70%</div>
+                        <img src="img/product-img/product-4.jpg" class="card-img-top" alt="product 1">
+                        <div class="wishlist">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="add-card">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="card-body text-left">
+                            <span class="brand text-uppercase">mango</span>
+                            <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                    <div class="card new">
+                        <img src="img/product-img/product-5.jpg" class="card-img-top" alt="product 1">
+                        <div class="wishlist">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="add-card">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="card-body text-left">
+                            <span class="brand text-uppercase">mango</span>
+                            <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/product-img/product-6.jpg" class="card-img-top" alt="product 1">
+                        <div class="wishlist">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="add-card">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="card-body text-left">
+                            <span class="brand text-uppercase">mango</span>
+                            <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End popular products -->
+
+        <!-- start top brands -->
+        <div class="top-brands">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4 col-md-2">
+                        <div class="brand">
+                            <img src="img/core-img/brand1.png" alt="brand 1">
+                        </div>
+                    </div>
+                    <div class="col-4  col-md-2">
+                        <div class="brand">
+                            <img src="img/core-img/brand2.png" alt="brand 1">
+                        </div>
+                    </div>
+                    <div class="col-4  col-md-2">
+                        <div class="brand">
+                            <img src="img/core-img/brand3.png" alt="brand 1">
+                        </div>
+                    </div>
+                    <div class="col-4  col-md-2">
+                        <div class="brand">
+                            <img src="img/core-img/brand4.png" alt="brand 1">
+                        </div>
+                    </div>
+                    <div class="col-4  col-md-2">
+                        <div class="brand">
+                            <img src="img/core-img/brand5.png" alt="brand 1">
+                        </div>
+                    </div>
+                    <div class="col-4  col-md-2">
+                        <div class="brand">
+                            <img src="img/core-img/brand6.png" alt="brand 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end top brands -->
+
+        <!-- start footer section -->
+        <footer>
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6">
+                        <div class="pages d-flex justify-content-start">
+                            <ul class="list list-unstyled d-flex justify-content-center">
+                                <li class="list-item logo">
+                                    <a class="list-link" href="#!">essense</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!">shop</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!">blog</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!">contact</a>
+                                </li>>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <div class="order-status">
                             <ul class="list list-unstyled">
-                                <li class="list-item">men's collections</li>
-                                <li class="list-item">women's collections</li>
-                                <li class="list-item">kid's collections</li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!" class="list-link">order status</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!" class="list-link">shopping delivery</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!" class="list-link">privacy policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-t 4 col-md-3">
+                        <div class="payment-option">
+                            <ul class="list list-unstyled">
+                                <li class="list-item">
+                                    <a class="list-link" href="#!" class="list-link">payement otopns</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!" class="list-link">guides</a>
+                                </li>
+                                <li class="list-item">
+                                    <a class="list-link" href="#!" class="list-link">terms of use</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="shoses pos-rel d-flex justify-content-center align-items-center">
-                        <h4 class="head-section text-capitalize">shoses</h4>
-                        <div class="category-overlay">
-                            <h4 class="subhead-section">shoses</h4>
-                            <ul class="list list-unstyled">
-                                <li class="list-item">men's collections</li>
-                                <li class="list-item">women's collections</li>
-                                <li class="list-item">kid's collections</li>
-                            </ul>
+                <div class="row mb-5">
+                    <div class="col-md-6">
+                        <div class="subscribe">
+                            <h6 class="title text-uppercase">subscribe</h6>
+                            <form action="">
+                                <input type="email" placeholder="you email here" name="email">
+                                <button>
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-self-end">
+                        <div class="social-links">
+                            <span class="icon">
+                                <span class="tip">facebook</span>
+                                <i class="fab fa-facebook-f"></i>
+                            </span>
+                            <span class="icon">
+                                <span class="tip">instagram</span>
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                            <span class="icon">
+                                <span class="tip">twitter</span>
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <span class="icon">
+                                <span class="tip">pinterest</span>
+                                <i class="fab fa-pinterest"></i>
+                            </span>
+                            <span class="icon">
+                                <span class="tip">youtube</span>
+                                <i class="fab fa-youtube"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="accessories pos-rel d-flex justify-content-center align-items-center">
-                        <h4 class="head-section text-capitalize">accessories</h4>
-                        <div class="category-overlay">
-                            <h4 class="subhead-section">accessories</h4>
-                            <ul class="list list-unstyled">
-                                <li class="list-item">men's collections</li>
-                                <li class="list-item">women's collections</li>
-                                <li class="list-item">kid's collections</li>
-                            </ul>
+                <div class="row">
+                    <div class="col">
+                        <div class="copy-right text-center">
+                            <p class="mx-auto text-capitalize">
+                                Copyright &copy;2020 All rights reserved | Made with by <strong>Colorlib</strong>, distributed by <strong>ThemeWagon</strong>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- End category section -->
-
-    <!-- Start glonal sale section -->
-    <div class="global-sale">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="sale d-flex justify-content-end align-items-center">
-                        <div class="sale-content">
-                            <span class="sale-discount mb-1 d-block">-60%</span>
-                            <h4 class="sale-title text-capitalize mb-5">global sale</h4>
-                            <a href="#!" class="btn btn-primary text-capitalize">buy now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End glonal sale section -->
-
-    <!-- start popular products -->
-    <div class="popular-products">
-        <h2 class="popular-products-title">popular products</h2>
-        <div class="container">
-            <div class="slider-container">
-                <div class="card new">
-                    <img src="img/product-img/product-1.jpg" class="card-img-top" alt="product 1">
-                    <div class="wishlist">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="add-card">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div class="card-body text-left">
-                        <span class="brand text-uppercase">mango</span>
-                        <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
-                        <span class="price">$120</span>
-                    </div>
-                </div>
-                <div class="card discount">
-                    <div class="discount-text">-30%</div>
-                    <img src="img/product-img/product-2.jpg" class="card-img-top" alt="product 1">
-                    <div class="wishlist">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="add-card">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div class="card-body text-left">
-                        <span class="brand text-uppercase">mango</span>
-                        <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
-                        <span class="price">$120</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/product-img/product-3.jpg" class="card-img-top" alt="product 1">
-                    <div class="wishlist">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="add-card">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div class="card-body text-left">
-                        <span class="brand text-uppercase">mango</span>
-                        <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
-                        <span class="price">$120</span>
-                    </div>
-                </div>
-                <div class="card discount">
-                    <div class="discount-text">-70%</div>
-                    <img src="img/product-img/product-4.jpg" class="card-img-top" alt="product 1">
-                    <div class="wishlist">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="add-card">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div class="card-body text-left">
-                        <span class="brand text-uppercase">mango</span>
-                        <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
-                        <span class="price">$120</span>
-                    </div>
-                </div>
-                <div class="card new">
-                    <img src="img/product-img/product-5.jpg" class="card-img-top" alt="product 1">
-                    <div class="wishlist">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="add-card">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div class="card-body text-left">
-                        <span class="brand text-uppercase">mango</span>
-                        <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
-                        <span class="price">$120</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/product-img/product-6.jpg" class="card-img-top" alt="product 1">
-                    <div class="wishlist">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="add-card">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div class="card-body text-left">
-                        <span class="brand text-uppercase">mango</span>
-                        <p class="card-text">PETITE Crepe Wrap Mini Dress</p>
-                        <span class="price">$120</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End popular products -->
-
-    <!-- start top brands -->
-    <div class="top-brands">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-4 col-md-2">
-                    <div class="brand">
-                        <img src="img/core-img/brand1.png" alt="brand 1">
-                    </div>
-                </div>
-                <div class="col-4  col-md-2">
-                    <div class="brand">
-                        <img src="img/core-img/brand2.png" alt="brand 1">
-                    </div>
-                </div>
-                <div class="col-4  col-md-2">
-                    <div class="brand">
-                        <img src="img/core-img/brand3.png" alt="brand 1">
-                    </div>
-                </div>
-                <div class="col-4  col-md-2">
-                    <div class="brand">
-                        <img src="img/core-img/brand4.png" alt="brand 1">
-                    </div>
-                </div>
-                <div class="col-4  col-md-2">
-                    <div class="brand">
-                        <img src="img/core-img/brand5.png" alt="brand 1">
-                    </div>
-                </div>
-                <div class="col-4  col-md-2">
-                    <div class="brand">
-                        <img src="img/core-img/brand6.png" alt="brand 1">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end top brands -->
-
-    <!-- start footer section -->
-    <footer>
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-6">
-                    <div class="pages d-flex justify-content-start">
-                        <ul class="list list-unstyled d-flex justify-content-center">
-                            <li class="list-item logo">
-                                <a class="list-link" href="#!">essense</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#!">shop</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#!">blog</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#!">contact</a>
-                            </li>>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-4 col-md-3">
-                    <div class="order-status">
-                        <ul class="list list-unstyled">
-                            <li class="list-item">
-                                <a class="list-link" href="#!" class="list-link">order status</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#!" class="list-link">shopping delivery</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#!" class="list-link">privacy policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-t 4 col-md-3">
-                    <div class="payment-option">
-                        <ul class="list list-unstyled">
-                            <li class="list-item">
-                                <a class="list-link" href="#!" class="list-link">payement otopns</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#!" class="list-link">guides</a>
-                            </li>
-                            <li class="list-item">
-                                <a class="list-link" href="#!" class="list-link">terms of use</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md-6">
-                    <div class="subscribe">
-                        <h6 class="title text-uppercase">subscribe</h6>
-                        <form action="">
-                            <input type="email" placeholder="you email here" name="email">
-                            <button>
-                                <i class="fas fa-long-arrow-alt-right"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-6 align-self-end">
-                    <div class="social-links">
-                        <span class="icon">
-                            <span class="tip">facebook</span>
-                            <i class="fab fa-facebook-f"></i>
-                        </span>
-                        <span class="icon">
-                            <span class="tip">instagram</span>
-                            <i class="fab fa-instagram"></i>
-                        </span>
-                        <span class="icon">
-                            <span class="tip">twitter</span>
-                            <i class="fab fa-twitter"></i>
-                        </span>
-                        <span class="icon">
-                            <span class="tip">pinterest</span>
-                            <i class="fab fa-pinterest"></i>
-                        </span>
-                        <span class="icon">
-                            <span class="tip">youtube</span>
-                            <i class="fab fa-youtube"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="copy-right text-center">
-                        <p class="mx-auto text-capitalize">
-                            Copyright &copy;2020 All rights reserved | Made with by <strong>Colorlib</strong>, distributed by <strong>ThemeWagon</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer section -->
+        </footer>
+        <!-- End footer section -->
 
 
-    <!-- include tiny-slider library -->
-    <script src="js/libs/tiny-slider.js"></script>
-    <!-- include js library -->
-    <script src="js/main.js"></script>
-</body>
+        <!-- include tiny-slider library -->
+        <script src="js/libs/tiny-slider.js"></script>
+        <!-- include smooth scroll library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js" integrity="sha256-CfyPGYLRQ4v1O+mZa5ocQglABXGuaZmmfe8awy8Fxis=" crossorigin="anonymous"></script>
+        <!-- include js library -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
