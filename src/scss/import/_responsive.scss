@@ -100,6 +100,24 @@ body{
                         padding: 1.5rem;
                         
                         position: relative;
+                        &.like{
+                            .no-of-items{
+                                top: 10px;
+                                right: 13px;
+                            }
+                            .wish-container{
+                                bottom: 120%;
+                                right: 0;
+                                top: auto;
+                                &.hover-wish{
+                                    bottom: 98%;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    top: auto;
+                                    right: -117px;
+                                }
+                            }
+                        }
                         &.cart{
                             .no-of-items{
                                 top: 10px;
@@ -114,6 +132,7 @@ body{
                                     visibility: visible;
                                     opacity: 1;
                                     top: auto;
+                                    right: -117px;
                                 }
                             }
                         }
@@ -188,6 +207,30 @@ body{
                 .user{
                     .search{
                         min-width: 184px;
+                    }
+                    &>div{
+                        &.like{
+                            .wish-container{
+                                &.hover-wish{
+                                    bottom: 98%;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    top: auto;
+                                    right: -117px;
+                                }
+                            }
+                        }
+                        &.cart{
+                            .cart-container{
+                                &.hover-cart{
+                                    bottom: 98%;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    top: auto;
+                                    right: -63px;
+                                }
+                            }
+                        }
                     }
                 }    
             }

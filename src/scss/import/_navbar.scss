@@ -284,8 +284,22 @@
                     justify-content: center;
                     align-items: center;
                     padding: 0 2rem;
-                    &.cart{
+                    &.like{
                         position: relative;
+                        .no-of-items{
+                            color: var(--danger);
+                            top: 13px;
+                            right: 23px;
+                        }
+                        @import './wishlist';
+                    }
+                    &.cart{
+                        
+                        .no-of-items{
+                            color: var(--blue);
+                            top: 13px;
+                            right: 23px;
+                        }
                         @import './cart';
                     }
                 }

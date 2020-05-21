@@ -1,4 +1,4 @@
-// hover on cart icon to popup cart section
+// click on cart icon to popup cart section
 // catch cart icon
 const cartIcon = document.querySelector('.nav-header .user .cart');
 // catch cart section

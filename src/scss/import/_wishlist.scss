@@ -1,0 +1,88 @@
+.wish-container{
+    position: absolute;
+    top: 120%;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 300px;
+    padding: 1.5rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    background: #fff;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.21);
+    cursor: default;
+    &.hover-wish{
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+    }
+    .wish-items{
+        .item{
+            position: relative;
+            display: grid;
+            grid-template-columns: 100px 120px;
+            grid-auto-rows: 100px;
+            border-bottom: 1px solid rgba(0,0,0,0.35);
+            justify-content: center;
+            margin-bottom:0.5rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .close-x{
+                position: absolute;
+                top: -3px;
+                right: 15px;
+                font-size: 0.75rem;
+                color: #888;
+                transition: font-size 0.3s ease-in-out;
+                &:hover{
+                    font-size: 1rem;
+                }
+            }
+            .item-img{
+                padding: 1rem;
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .item-desc{
+                font-size: 0.9rem;
+                align-self: center;
+                justify-self: start;
+                .title{
+                    font-size: inherit;
+                    color: #777;
+                }
+            }
+        }
+    }
+    .checkout{
+        margin-top: 1.5rem;
+        a{
+            border-radius: 0;
+            text-transform: capitalize;
+            outline: 0;
+            // border: 0;
+            &.btn-primary{
+                border-color: var(--blue);
+                &:hover{
+                    background: var(--danger);
+                    border-color: var(--danger);
+                }
+            }
+            &.btn-secondary{
+                &:hover{
+                    background: var(--light);
+                    color: var(--gray);
+                    border: 1px solid var(--gray);
+                }
+            }
+            &:active,
+            &:focus{
+                box-shadow: none !important;
+            }
+        }
+    }
+}
