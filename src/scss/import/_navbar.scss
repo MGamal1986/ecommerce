@@ -145,6 +145,8 @@
                     .list{
                         padding-top:6rem;
                        .list-item{
+                            text-decoration: none;
+                            display: block;
                             background: $expandMenuColor;
                             padding:0.5rem;
                             border-bottom: 1px solid #fff;
