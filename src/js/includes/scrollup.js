@@ -15,4 +15,3 @@ let scroll = new SmoothScroll('#scrollup', {
     speed: 600
 });
 
-

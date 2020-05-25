@@ -18,3 +18,4 @@ wishIconClose.forEach((close)=>{
         event.target.parentElement.parentElement.remove();
     }
 })
+
