@@ -1,8 +1,8 @@
-import Nav from './includes/Nav';
-import Cart from './includes/Cart';
-import MainScroll from './includes/MainScroll';
-import ScrollUp from './includes/ScrollUp';
-import Wish from './includes/Wish';
+import Nav from './includes/Nav.js';
+import Cart from './includes/Cart.js';
+import MainScroll from './includes/MainScroll.js';
+import ScrollUp from './includes/ScrollUp.js';
+import Wish from './includes/Wish.js';
 
 // run required components
 
