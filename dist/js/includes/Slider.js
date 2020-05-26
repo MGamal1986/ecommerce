@@ -43,3 +43,5 @@
   }
   export default Slider;
 
+
+//# sourceMappingURL=Slider.js.map

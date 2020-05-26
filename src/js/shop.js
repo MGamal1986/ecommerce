@@ -11,4 +11,3 @@ Cart();
 MainScroll();
 ScrollUp();
 Wish();
-//# sourceMappingURL=shop.js.map

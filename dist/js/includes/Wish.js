@@ -23,3 +23,5 @@ function Wish(){
 
 export default Wish;
 
+
+//# sourceMappingURL=Wish.js.map
