@@ -8,6 +8,7 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    // import homepage styles
     @import 'import/navbar';
     @import 'import/scrollup';
     @import 'import/new-collection';
@@ -15,6 +16,12 @@ body{
     @import 'import/global-sale';
     @import 'import/popular-products';
     @import 'import/brands';
+
+    // import shop page styles
+    @import 'import/shop';
+
+
+
     @import 'import/footer';
 
     overflow-x: hidden;
