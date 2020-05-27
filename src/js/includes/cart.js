@@ -1,22 +1,24 @@
-// click on cart icon to popup cart section
-// catch cart icon
-const cartIcon = document.querySelector('.nav-header .user .cart');
-// catch cart section
-const cartContainer = document.querySelector('.nav-header .user .cart .cart-container');
-cartContainer.onclick = (event)=>{
-    event.stopPropagation();
-}
-cartIcon.addEventListener('click',(event)=>{
-    cartContainer.classList.toggle('hover-cart');
-})
-// remove items form cart
-// catch close btn for each item
-const cartIconClose = document.querySelectorAll('.nav-header .user .cart .close-x');
-cartIconClose.forEach((close)=>{
-    close.onclick = (event)=>{
-        event.target.parentElement.parentElement.remove();
+function Cart(){
+    // click on cart icon to popup cart section
+    // catch cart icon
+    const cartIcon = document.querySelector('.nav-header .user .cart');
+    // catch cart section
+    const cartContainer = document.querySelector('.nav-header .user .cart .cart-container');
+    cartContainer.onclick = (event)=>{
+        event.stopPropagation();
     }
-})
+    cartIcon.addEventListener('click',(event)=>{
+        cartContainer.classList.toggle('hover-cart');
+    })
+    // remove items form cart
+    // catch close btn for each item
+    const cartIconClose = document.querySelectorAll('.nav-header .user .cart .close-x');
+    cartIconClose.forEach((close)=>{
+        close.onclick = (event)=>{
+            event.target.parentElement.parentElement.remove();
+        }
+    })
+
 
 // add more than one items
 // catch increment and decrement button
@@ -39,6 +41,7 @@ decrementBtn.forEach((btn)=>{
     }
 })
 
-
+}
+export default Cart;
 
 
