@@ -47,12 +47,6 @@ gulp.task('sass',()=>{
             .pipe(gulp.dest('dist/css'))
 })
 
-// babel task
-// gulp.task('copy', () =>{
-//     return gulp.src('src/js/includes/*.js')
-//             .pipe(gulp.dest('dist/js/includes'))
-//     }
-// );
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
