@@ -47,37 +47,39 @@ gulp.task('sass',()=>{
             .pipe(gulp.dest('dist/css'))
 })
 
-// babel task
-gulp.task('babel_all', () =>{
-    return gulp.src('src/js/**/*.js')
-            .pipe(sourcemaps.init())
-            .pipe(babel({
-                presets: ['@babel/env']
-            }))
-            .pipe(concat('all.js'))
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const babelify = require('babelify');
+
+gulp.task('js-all', () =>{
+     return browserify('src/js/all.js')
+            .transform('babelify', {presets: ['@babel/preset-env']})
+            .bundle()
+            .pipe(source('all.js')) // Readable Stream -> Stream Of Vinyl Files
+            .pipe(buffer()) // Vinyl Files -> Buffered Vinyl Files
+            // Pipe Gulp Plugins Here
             .pipe(uglify())
-            .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest('dist/js'))
+            .pipe(gulp.dest('dist/js'));
     }
 );
-gulp.task('babel_shop', () =>{
-    return gulp.src(['src/js/includes/*.js','!src/js/includes/slider.js'])
-            .pipe(sourcemaps.init())
-            .pipe(babel({
-                presets: ['@babel/env']
-            }))
-            .pipe(concat('shop.js'))
-            .pipe(uglify())
-            .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest('dist/js'))
-    }
+gulp.task('js-shop', () =>{
+    return browserify('src/js/shop.js')
+           .transform('babelify', {presets: ['@babel/preset-env']})
+           .bundle()
+           .pipe(source('shop.js')) // Readable Stream -> Stream Of Vinyl Files
+           .pipe(buffer()) // Vinyl Files -> Buffered Vinyl Files
+           // Pipe Gulp Plugins Here
+           .pipe(uglify())
+           .pipe(gulp.dest('dist/js'));
+   }
 );
 
 
 gulp.task('watch',()=>{
     gulp.watch('src/**/*.scss',gulp.series('sass'));
-    gulp.watch('src/js/**/*.js',gulp.series('babel_all'));
-    gulp.watch('src/js/**/*.js',gulp.series('babel_shop'));
+    gulp.watch('src/**/*.js',gulp.series('js-all'));
+    gulp.watch('src/**/*.js',gulp.series('js-shop'));
 })
 
 // add defualt task
