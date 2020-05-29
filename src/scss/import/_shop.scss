@@ -9,6 +9,55 @@
 
 .products{
     padding: 4rem 0;
+    .products-head{
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        .product-no{
+            .no{
+                color: $mainColor;
+                margin-right: 0.5rem;
+            }
+        }
+        .drop{
+            .sort-by{
+                margin-right: 1rem;
+            }
+            .menu{
+                position: relative;
+                .menu-head{
+                    cursor: pointer;
+                }
+                .menu-list{
+                    position: absolute;
+                    margin: 0;
+                    border: 1px solid #ccc;
+                    z-index: 5;
+                    background: #eee;
+                    width: 150px;
+                    top: 20px;
+                    left: -71px;
+                    text-align: center;
+                    transition: all 0.3s ease-in-out;
+                    transform: scale(0);
+                    opacity: 0;
+                    &.face{
+                        transform: scale(1);
+                        opacity: 1; 
+                    }
+                    .menu-item{
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+                        &.active{
+                            color: $mainColor;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
     .product-list{
         display: grid;
         grid-template-columns: repeat(3,1fr);
