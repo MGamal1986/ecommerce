@@ -62,6 +62,11 @@ body{
                 }
             }
         }
+        .products{
+            .product-list{
+                grid-template-columns: repeat(2,1fr) !important;
+            }
+        }
     }
     @include mSm{
         nav.navigation{
@@ -262,6 +267,11 @@ body{
                 img{
                     width: 80%;
                 }
+            }
+        }
+        .products{
+            .product-list{
+                display: block !important;
             }
         }
     }
