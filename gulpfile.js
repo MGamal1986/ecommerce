@@ -42,7 +42,7 @@ gulp.task('sass',()=>{
             .pipe(sass())
             .pipe(prefixer('last 2 versions'))
             .pipe(cleanCss())
-            .pipe(rename('style..min.css'))
+            .pipe(rename('style.min.css'))
             .pipe(sourcemaps.write('.')) // to make map file with css file
             .pipe(gulp.dest('dist/css'))
 })
