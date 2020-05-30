@@ -9,22 +9,16 @@
 body{
     font-family: "Poppins", sans-serif;
     // import homepage styles
-    &.home{
-        @import 'import/navbar';
-        @import 'import/scrollup';
-        @import 'import/new-collection';
-        @import 'import/categores';
-        @import 'import/global-sale';
-        @import 'import/popular-products';
-        @import 'import/brands';
-    }
+    @import 'import/navbar';
+    @import 'import/scrollup';
+    @import 'import/new-collection';
+    @import 'import/categores';
+    @import 'import/global-sale';
+    @import 'import/popular-products';
+    @import 'import/brands';
 
     // import shop page styles
-    &.shop{
-        @import 'import/navbar';
-        @import 'import/scrollup';
-        @import 'import/shop';
-    }
+    @import 'import/shop';
 
 
 
