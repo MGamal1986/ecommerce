@@ -25,11 +25,10 @@
             }
         }
         .drop{
-            display: grid;
-            grid-template-columns: 1fr 2fr;
+            display: flex;
+            justify-content: flex-end;
             .sort-by{
-                align-self: center;
-                justify-self: center;
+                margin-right: 1rem;
             }
             .menu{
                 position: relative;
@@ -139,7 +138,6 @@
             }
             .card-body{
                 padding: 0;
-                padding-top:1rem;
                 font-weight: 600;
                 .brand{
                     color: rgba(0, 0, 0, 0.33);
@@ -152,6 +150,43 @@
                     font-weight: 600;
                     font-size: .9rem
                 }
+            }
+        }
+        .new{
+            position: relative;
+            &:before{
+                content: 'new';
+                position: absolute;
+                top: 14px;
+                left: 31px;
+                display: inline-block;
+                background: var(--blue);
+                color: #fff;
+                width: 50px;
+                height: 25px;
+                font-size: .75rem;
+                text-transform: capitalize;
+                text-align: center;
+                line-height: 25px;
+                font-weight: 600;
+            }
+        }
+        .discount{
+            position: relative;
+            .discount-text{
+                position: absolute;
+                top: 14px;
+                left: 31px;
+                display: inline-block;
+                background: var(--danger);
+                color: #fff;
+                width: 50px;
+                height: 25px;
+                font-size: .75rem;
+                text-transform: capitalize;
+                text-align: center;
+                line-height: 25px;
+                font-weight: 600;
             }
         }
     }

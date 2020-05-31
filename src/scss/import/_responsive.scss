@@ -272,12 +272,22 @@ body{
         .products{
             .products-head{
                 display: block;
+                .product-no{
+                    margin-bottom: 0.25rem;
+                }
                 .drop{
-                    display: block;
+                    display: flex;
+                    justify-content: flex-start;
+                    .sort-by{
+                        margin-right: 1rem;
+                    }
                 }
             }
             .product-list{
                 display: block !important;
+                .card{
+                    margin-bottom: 1rem;
+                }
             }
         }
     }
