@@ -270,6 +270,12 @@ body{
             }
         }
         .products{
+            .products-head{
+                display: block;
+                .drop{
+                    display: block;
+                }
+            }
             .product-list{
                 display: block !important;
             }
