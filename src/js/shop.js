@@ -6,6 +6,7 @@ import Slider from './includes/Slider.js';
 import WishCartSelect from './includes/WishCartSelect';
 import Wish from './includes/Wish.js';
 import ShopSortBy from './includes/ShopSortBy.js';
+import Pagination from './includes/Pagaination';
 
 Cart();
 MainScroll();
@@ -14,3 +15,4 @@ Scrollup();
 WishCartSelect();
 Wish();
 ShopSortBy();
+Pagination();
