@@ -1,7 +1,7 @@
 import {addEvent} from './Functions.js';
 function ShopSortBy(){
     // catch list span
-    const listSpan = document.querySelector('.products .drop .menu .menu-head span');
+    const listSpan = document.querySelector('.products .drop .menu .menu-head');
     // catch sort by menu
     const sortMenu = document.querySelector('.products .drop .menu .menu-list');
     // catch angle down menu
@@ -25,7 +25,7 @@ function ShopSortBy(){
                 
             }
             event.target.classList.toggle('active');
-            listSpan.textContent = event.target.textContent;
+            listSpan.children[0].textContent = event.target.textContent;
             sortMenu.classList.toggle('face');
             angleMenu.classList.toggle('rotate');
         })
