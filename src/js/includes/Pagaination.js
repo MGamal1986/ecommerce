@@ -1,14 +1,16 @@
 import {addEvent} from './Functions';
 function Pagination(){
-    const pages = document.querySelectorAll('.pages .page-link');
-    pages.forEach(page=>{
+    const pagesLinks = document.querySelectorAll('.pages .page-link');
+    const pagesItems = document.querySelectorAll('.pages .page-item');
+    pagesLinks.forEach(page=>{
         addEvent(page,'click',(event)=>{
             event.preventDefault();
-            // console.log(event.target.className);
             
             if(!event.target.classList.contains('next') && !event.target.classList.contains('previous') ){
-                 let siblings = event.target.parentElement.children[0];
-                console.log(siblings);
+                pagesItems.forEach(item=>{
+                    item.children[0].classList.remove('active');
+                })
+                event.target.classList.add('active');
             }
            
             
