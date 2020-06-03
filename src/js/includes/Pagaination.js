@@ -1,20 +1,54 @@
 import {addEvent} from './Functions';
+// select elments
+const pagesLinks = document.querySelectorAll('.pages .page-link.layouts');
+const pagesItems = document.querySelectorAll('.pages .page-item');
+const nextBtn = document.querySelector('.pages .page-link.next');
+const previousBtn = document.querySelector('.pages .page-link.previous');
+// const pagesContainer = document.querySelector('.pages .pagination');
+let pagesLength = pagesLinks.length;
+
+// create nextToggle function
+let nextToggle = (pages,length)=>{
+    let order;
+    pages.forEach((page,index)=>{
+        if(page.classList.contains('active')){
+            order = index;
+        }
+    })
+    order +=1;
+    if(order < length){
+        pages.forEach(page=>{
+            page.classList.remove('active')
+        })
+        pages[order].classList.add('active');
+    }
+    console.log(order,length);   
+}
+
+// create active function
+let makeActive = (element,pageElements)=>{
+    pageElements.forEach((item,index)=>{
+        item.classList.remove('active');
+    })
+    element.classList.add('active');
+}
+
+
+
+
 function Pagination(){
-    const pagesLinks = document.querySelectorAll('.pages .page-link');
-    const pagesItems = document.querySelectorAll('.pages .page-item');
     pagesLinks.forEach(page=>{
         addEvent(page,'click',(event)=>{
             event.preventDefault();
-            
-            if(!event.target.classList.contains('next') && !event.target.classList.contains('previous') ){
-                pagesItems.forEach(item=>{
-                    item.children[0].classList.remove('active');
-                })
-                event.target.classList.add('active');
-            }
-           
-            
+            makeActive(event.target,pagesLinks);
         })
     })
+    addEvent(nextBtn,'click',(event)=>{
+        event.preventDefault();
+        nextToggle(pagesLinks,pagesLength);
+    })
+    // addEvent(previousBtn,'click',(event)=>{
+    //     console.log('prev');
+    // })
 }
 export default Pagination;

@@ -70,7 +70,7 @@ gulp.task('js-shop', () =>{
            .pipe(source('shop.js')) // Readable Stream -> Stream Of Vinyl Files
            .pipe(buffer()) // Vinyl Files -> Buffered Vinyl Files
            // Pipe Gulp Plugins Here
-           .pipe(uglify())
+        //    .pipe(uglify())
            .pipe(gulp.dest('dist/js'));
    }
 );
