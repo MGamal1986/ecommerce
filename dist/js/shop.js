@@ -224,8 +224,24 @@ var nextToggle = function nextToggle(pages, length) {
     });
     pages[order].classList.add('active');
   }
+}; // create prevToggle function
 
-  console.log(order, length);
+
+var prevToggle = function prevToggle(pages, length) {
+  var order;
+  pages.forEach(function (page, index) {
+    if (page.classList.contains('active')) {
+      order = index;
+    }
+  });
+  order -= 1;
+
+  if (order >= 0) {
+    pages.forEach(function (page) {
+      page.classList.remove('active');
+    });
+    pages[order].classList.add('active');
+  }
 }; // create active function
 
 
@@ -246,9 +262,11 @@ function Pagination() {
   (0, _Functions.addEvent)(nextBtn, 'click', function (event) {
     event.preventDefault();
     nextToggle(pagesLinks, pagesLength);
-  }); // addEvent(previousBtn,'click',(event)=>{
-  //     console.log('prev');
-  // })
+  });
+  (0, _Functions.addEvent)(previousBtn, 'click', function (event) {
+    event.preventDefault();
+    prevToggle(pagesLinks, pagesLength);
+  });
 }
 
 var _default = Pagination;

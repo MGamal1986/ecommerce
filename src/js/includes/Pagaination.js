@@ -22,7 +22,23 @@ let nextToggle = (pages,length)=>{
         })
         pages[order].classList.add('active');
     }
-    console.log(order,length);   
+}
+
+// create prevToggle function
+let prevToggle = (pages,length)=>{
+    let order;
+    pages.forEach((page,index)=>{
+        if(page.classList.contains('active')){
+            order = index;
+        }
+    })
+    order -=1;
+    if(order >= 0){
+        pages.forEach(page=>{
+            page.classList.remove('active')
+        })
+        pages[order].classList.add('active');
+    }
 }
 
 // create active function
@@ -47,8 +63,9 @@ function Pagination(){
         event.preventDefault();
         nextToggle(pagesLinks,pagesLength);
     })
-    // addEvent(previousBtn,'click',(event)=>{
-    //     console.log('prev');
-    // })
+    addEvent(previousBtn,'click',(event)=>{
+        event.preventDefault();
+        prevToggle(pagesLinks,pagesLength);
+    })
 }
 export default Pagination;
