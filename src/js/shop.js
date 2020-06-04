@@ -7,6 +7,7 @@ import WishCartSelect from './includes/WishCartSelect';
 import Wish from './includes/Wish.js';
 import ShopSortBy from './includes/ShopSortBy.js';
 import Pagination from './includes/Pagaination';
+import ShopCategory from './includes/ShopCategory';
 
 Cart();
 MainScroll();
@@ -16,3 +17,4 @@ WishCartSelect();
 Wish();
 ShopSortBy();
 Pagination();
+ShopCategory();

@@ -310,6 +310,31 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _Functions = require("./Functions");
+
+// select elements
+var lineCategories = document.querySelectorAll('.products .lines .line .line-item');
+
+function ShopCategory() {
+  lineCategories.forEach(function (line) {
+    (0, _Functions.addEvent)(line, 'click', function (event) {
+      event.target.parentElement.classList.toggle('active');
+      event.target.classList.toggle('focus');
+    });
+  });
+}
+
+var _default = ShopCategory;
+exports["default"] = _default;
+
+},{"./Functions":2}],8:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 var _Functions = require("./Functions.js");
 
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
@@ -362,7 +387,7 @@ function ShopSortBy() {
 var _default = ShopSortBy;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],8:[function(require,module,exports){
+},{"./Functions.js":2}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -397,7 +422,7 @@ function Slider() {
 var _default = Slider;
 exports["default"] = _default;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -434,7 +459,7 @@ function Wish() {
 var _default = Wish;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],10:[function(require,module,exports){
+},{"./Functions.js":2}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -467,7 +492,7 @@ function WishCartSelect() {
 var _default = WishCartSelect;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],11:[function(require,module,exports){
+},{"./Functions.js":2}],12:[function(require,module,exports){
 "use strict";
 
 var _Cart = _interopRequireDefault(require("./includes/Cart.js"));
@@ -488,6 +513,8 @@ var _ShopSortBy = _interopRequireDefault(require("./includes/ShopSortBy.js"));
 
 var _Pagaination = _interopRequireDefault(require("./includes/Pagaination"));
 
+var _ShopCategory = _interopRequireDefault(require("./includes/ShopCategory"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 (0, _Cart["default"])();
@@ -498,5 +525,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 (0, _Wish["default"])();
 (0, _ShopSortBy["default"])();
 (0, _Pagaination["default"])();
+(0, _ShopCategory["default"])();
 
-},{"./includes/Cart.js":1,"./includes/MainScroll.js":3,"./includes/Nav.js":4,"./includes/Pagaination":5,"./includes/Scrollup.js":6,"./includes/ShopSortBy.js":7,"./includes/Slider.js":8,"./includes/Wish.js":9,"./includes/WishCartSelect":10}]},{},[11]);
+},{"./includes/Cart.js":1,"./includes/MainScroll.js":3,"./includes/Nav.js":4,"./includes/Pagaination":5,"./includes/Scrollup.js":6,"./includes/ShopCategory":7,"./includes/ShopSortBy.js":8,"./includes/Slider.js":9,"./includes/Wish.js":10,"./includes/WishCartSelect":11}]},{},[12]);

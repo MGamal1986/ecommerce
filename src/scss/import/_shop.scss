@@ -17,8 +17,53 @@
             margin: 0;
         }
         .line{
+            &:first-of-type{
+                margin-top: 1.5rem;
+            }
+            margin-bottom: 0.5rem;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
             .line-item{
                 font-weight: 600;
+                font-size: 0.8rem;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                color: rgba(0, 0, 0, 0.11);
+                &:hover{
+                    color: #000;
+                }
+                &.focus{
+                    color: #000;
+                }
+            }
+            .line-menu{
+                height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+                margin-top: 0.5rem;
+                margin-left: 0.5rem;
+                
+                .line-link{
+                    color: #000;
+                    display: block;
+                    text-decoration: none;
+                    color: #000;
+                    display: block;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    margin-bottom: 0.17rem;
+                    color: #777;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+           
+            &.active{
+                .line-menu{
+                    height: 151px;
+                }
             }
         }
     }
