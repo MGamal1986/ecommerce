@@ -66,6 +66,38 @@
                 }
             }
         }
+        .price{
+            padding: 1rem 0;
+            .price-title{
+                margin-bottom: 1.5rem;
+                font-weight: 600;
+                font-size: 0.8rem;
+            }
+        }
+        .colors{
+            padding: 1rem 0;
+            .colors-title{
+                margin-bottom: 1.5rem;
+                font-weight: 600;
+                font-size: 0.8rem;
+            }
+            .colors-container{
+                display: grid;
+                grid-template-columns: repeat(5,25px);
+                grid-auto-rows: 25px;
+                grid-gap: 20px;
+                .color{
+                    cursor: pointer;
+                    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.29);
+                    transition: all 0.3s ease-in-out;
+                    border-radius: 3px;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+                
+            }
+        }
     }
     .products-head{
         font-size: 0.8rem;

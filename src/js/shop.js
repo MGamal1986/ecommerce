@@ -8,6 +8,7 @@ import Wish from './includes/Wish.js';
 import ShopSortBy from './includes/ShopSortBy.js';
 import Pagination from './includes/Pagaination';
 import ShopCategory from './includes/ShopCategory';
+import Colors from './includes/ColorsBrands';
 
 Cart();
 MainScroll();
@@ -18,3 +19,4 @@ Wish();
 ShopSortBy();
 Pagination();
 ShopCategory();
+Colors();

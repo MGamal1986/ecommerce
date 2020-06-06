@@ -52,7 +52,23 @@ function Cart() {
 var _default = Cart;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],2:[function(require,module,exports){
+},{"./Functions.js":3}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = ColorBrands;
+// select elements 
+var colorBrands = document.querySelectorAll('.products .color');
+
+function ColorBrands() {
+  colorBrands.forEach(function (color) {
+    color.style.background = color.dataset.color;
+  });
+}
+
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64,7 +80,7 @@ function addEvent(el, ev, cb) {
   el.addEventListener(ev, cb);
 }
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -91,7 +107,7 @@ function MainScroll() {
 var _default = MainScroll;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],4:[function(require,module,exports){
+},{"./Functions.js":3}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -191,7 +207,7 @@ function Nav() {
 var _default = Nav;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],5:[function(require,module,exports){
+},{"./Functions.js":3}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -272,7 +288,7 @@ function Pagination() {
 var _default = Pagination;
 exports["default"] = _default;
 
-},{"./Functions":2}],6:[function(require,module,exports){
+},{"./Functions":3}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -302,7 +318,7 @@ function Scrollup() {
 var _default = Scrollup;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],7:[function(require,module,exports){
+},{"./Functions.js":3}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -327,7 +343,7 @@ function ShopCategory() {
 var _default = ShopCategory;
 exports["default"] = _default;
 
-},{"./Functions":2}],8:[function(require,module,exports){
+},{"./Functions":3}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -387,7 +403,7 @@ function ShopSortBy() {
 var _default = ShopSortBy;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],9:[function(require,module,exports){
+},{"./Functions.js":3}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -422,7 +438,7 @@ function Slider() {
 var _default = Slider;
 exports["default"] = _default;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -459,7 +475,7 @@ function Wish() {
 var _default = Wish;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],11:[function(require,module,exports){
+},{"./Functions.js":3}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -492,7 +508,7 @@ function WishCartSelect() {
 var _default = WishCartSelect;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],12:[function(require,module,exports){
+},{"./Functions.js":3}],13:[function(require,module,exports){
 "use strict";
 
 var _Cart = _interopRequireDefault(require("./includes/Cart.js"));
@@ -515,6 +531,8 @@ var _Pagaination = _interopRequireDefault(require("./includes/Pagaination"));
 
 var _ShopCategory = _interopRequireDefault(require("./includes/ShopCategory"));
 
+var _ColorsBrands = _interopRequireDefault(require("./includes/ColorsBrands"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 (0, _Cart["default"])();
@@ -526,5 +544,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 (0, _ShopSortBy["default"])();
 (0, _Pagaination["default"])();
 (0, _ShopCategory["default"])();
+(0, _ColorsBrands["default"])();
 
-},{"./includes/Cart.js":1,"./includes/MainScroll.js":3,"./includes/Nav.js":4,"./includes/Pagaination":5,"./includes/Scrollup.js":6,"./includes/ShopCategory":7,"./includes/ShopSortBy.js":8,"./includes/Slider.js":9,"./includes/Wish.js":10,"./includes/WishCartSelect":11}]},{},[12]);
+},{"./includes/Cart.js":1,"./includes/ColorsBrands":2,"./includes/MainScroll.js":4,"./includes/Nav.js":5,"./includes/Pagaination":6,"./includes/Scrollup.js":7,"./includes/ShopCategory":8,"./includes/ShopSortBy.js":9,"./includes/Slider.js":10,"./includes/Wish.js":11,"./includes/WishCartSelect":12}]},{},[13]);
