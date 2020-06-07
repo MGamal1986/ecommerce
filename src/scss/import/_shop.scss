@@ -73,6 +73,9 @@
                 font-weight: 600;
                 font-size: 0.8rem;
             }
+            input{
+                width: 100%;
+            }
         }
         .colors{
             padding: 1rem 0;
@@ -82,11 +85,17 @@
                 font-size: 0.8rem;
             }
             .colors-container{
-                display: grid;
-                grid-template-columns: repeat(5,25px);
-                grid-auto-rows: 25px;
-                grid-gap: 20px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                &:last-child{
+                    margin-bottom: 0;
+                }
                 .color{
+                    margin-right: 1rem;
+                    margin-bottom: 1rem;
+                    flex: 0 0 30px;
+                    height: 30px;
                     cursor: pointer;
                     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.29);
                     transition: all 0.3s ease-in-out;
@@ -94,8 +103,7 @@
                     &:hover{
                         transform: scale(1.2);
                     }
-                }
-                
+                }                
             }
         }
     }
