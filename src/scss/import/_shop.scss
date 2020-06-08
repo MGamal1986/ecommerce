@@ -76,6 +76,33 @@
             input{
                 width: 100%;
             }
+            .irs-bar{
+                background: #007bff;
+            }
+            .irs-from,
+            .irs-to,
+            .irs-single{
+                background: #007bff;
+            }
+            .irs-handle{
+                i:first-child{
+                    background-color: #000;
+                    width: 4px;
+                    top: -2px
+                }
+            }
+            .irs-line,
+            .irs-bar{
+                height: 7px;
+            }
+            .irs-to:before,
+            .irs-from:before,
+            .irs-single:before{
+                border-top-color: #007bff;
+            }
+            .irs-grid{
+                display: none;
+            }
         }
         .colors{
             padding: 1rem 0;
