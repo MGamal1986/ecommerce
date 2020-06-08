@@ -9,6 +9,7 @@ import ShopSortBy from './includes/ShopSortBy.js';
 import Pagination from './includes/Pagaination';
 import ShopCategory from './includes/ShopCategory';
 import Colors from './includes/ColorsBrands';
+import RangeSlider from './includes/RangeSlider';
 
 Cart();
 MainScroll();
@@ -20,3 +21,4 @@ ShopSortBy();
 Pagination();
 ShopCategory();
 Colors();
+RangeSlider();
