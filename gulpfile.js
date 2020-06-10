@@ -75,11 +75,24 @@ gulp.task('js-shop', () =>{
    }
 );
 
+gulp.task('js-single', () =>{
+    return browserify('src/js/single-product.js')
+           .transform('babelify', {presets: ['@babel/preset-env']})
+           .bundle()
+           .pipe(source('single-product.js')) // Readable Stream -> Stream Of Vinyl Files
+           .pipe(buffer()) // Vinyl Files -> Buffered Vinyl Files
+           // Pipe Gulp Plugins Here
+        //    .pipe(uglify())
+           .pipe(gulp.dest('dist/js'));
+   }
+);
+
 
 gulp.task('watch',()=>{
     gulp.watch('src/**/*.scss',gulp.series('sass'));
     gulp.watch('src/**/*.js',gulp.series('js-all'));
     gulp.watch('src/**/*.js',gulp.series('js-shop'));
+    gulp.watch('src/**/*.js',gulp.series('js-single'));
 })
 
 // add defualt task
