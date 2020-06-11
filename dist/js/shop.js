@@ -13708,20 +13708,11 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function ShopSortBy() {
-  // catch list span
-  var listSpan = document.querySelector('.products .drop .menu .menu-head'); // catch sort by menu
-
-  var sortMenu = document.querySelector('.products .drop .menu .menu-list'); // catch angle down menu
-
-  var angleMenu = document.querySelector('.products .drop .menu .menu-head i'); // add click event to span list
-
+function ShopSortBy(listSpan, sortMenu, angleMenu, sortMenuItem) {
   (0, _Functions.addEvent)(listSpan, 'click', function (event) {
     sortMenu.classList.toggle('face');
     angleMenu.classList.toggle('rotate');
-  }); // catch sort by menu item
-
-  var sortMenuItem = document.querySelectorAll('.products .drop .menu .menu-list .menu-item');
+  });
   sortMenuItem.forEach(function (item) {
     // add click event to open sort by menu and rotate angle menu
     (0, _Functions.addEvent)(item, 'click', function (event) {
@@ -13746,7 +13737,7 @@ function ShopSortBy() {
       sortMenu.classList.toggle('face');
       angleMenu.classList.toggle('rotate');
     });
-  }); // 
+  });
 }
 
 var _default = ShopSortBy;
@@ -13886,13 +13877,21 @@ var _RangeSlider = _interopRequireDefault(require("./includes/RangeSlider"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+// catch list span
+var listSpan = document.querySelector('.menu .menu-head'); // catch sort by menu
+
+var sortMenu = document.querySelector('.menu .menu-list'); // catch angle down menu
+
+var angleMenu = document.querySelector('.menu .menu-head i'); // catch sort by menu item
+
+var sortMenuItem = document.querySelectorAll('.menu .menu-list .menu-item');
 (0, _Cart["default"])();
 (0, _MainScroll["default"])();
 (0, _Nav["default"])();
 (0, _Scrollup["default"])();
 (0, _WishCartSelect["default"])();
 (0, _Wish["default"])();
-(0, _ShopSortBy["default"])();
+(0, _ShopSortBy["default"])(listSpan, sortMenu, angleMenu, sortMenuItem);
 (0, _Pagaination["default"])();
 (0, _ShopCategory["default"])();
 (0, _ColorsBrands["default"])();

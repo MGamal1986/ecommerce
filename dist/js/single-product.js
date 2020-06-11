@@ -229,6 +229,57 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _Functions = require("./Functions.js");
+
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function ShopSortBy(listSpan, sortMenu, angleMenu, sortMenuItem) {
+  (0, _Functions.addEvent)(listSpan, 'click', function (event) {
+    sortMenu.classList.toggle('face');
+    angleMenu.classList.toggle('rotate');
+  });
+  sortMenuItem.forEach(function (item) {
+    // add click event to open sort by menu and rotate angle menu
+    (0, _Functions.addEvent)(item, 'click', function (event) {
+      var elements = event.target.parentElement.children; // we use for of as HTMLCollection doesnot have forEach function but it has [symbol.iterator] key
+
+      var _iterator = _createForOfIteratorHelper(elements),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var el = _step.value;
+          el.classList.remove('active');
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      event.target.classList.toggle('active');
+      listSpan.children[0].textContent = event.target.textContent;
+      sortMenu.classList.toggle('face');
+      angleMenu.classList.toggle('rotate');
+    });
+  });
+}
+
+var _default = ShopSortBy;
+exports["default"] = _default;
+
+},{"./Functions.js":2}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 function Slider() {
   var slider = tns({
     container: '.slider-container',
@@ -256,7 +307,7 @@ function Slider() {
 var _default = Slider;
 exports["default"] = _default;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -293,7 +344,7 @@ function Wish() {
 var _default = Wish;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],8:[function(require,module,exports){
+},{"./Functions.js":2}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -326,7 +377,7 @@ function WishCartSelect() {
 var _default = WishCartSelect;
 exports["default"] = _default;
 
-},{"./Functions.js":2}],9:[function(require,module,exports){
+},{"./Functions.js":2}],10:[function(require,module,exports){
 "use strict";
 
 var _Cart = _interopRequireDefault(require("./includes/Cart.js"));
@@ -343,14 +394,42 @@ var _WishCartSelect = _interopRequireDefault(require("./includes/WishCartSelect"
 
 var _Wish = _interopRequireDefault(require("./includes/Wish.js"));
 
+var _ShopSortBy = _interopRequireDefault(require("./includes/ShopSortBy"));
+
+var _Functions = require("./includes/Functions");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+// catch list span
+var listSpan = document.querySelector('.menu.size .menu-head'); // catch sort by menu
+
+var sortMenu = document.querySelector('.menu.size .menu-list'); // catch angle down menu
+
+var angleMenu = document.querySelector('.menu.size .menu-head i'); // catch sort by menu item
+
+var sortMenuItem = document.querySelectorAll('.menu.size .menu-list .menu-item'); // catch list span
+
+var listSpan2 = document.querySelector('.menu.color .menu-head'); // catch sort by menu
+
+var sortMenu2 = document.querySelector('.menu.color .menu-list'); // catch angle down menu
+
+var angleMenu2 = document.querySelector('.menu.color .menu-head i'); // catch sort by menu item
+
+var sortMenuItem2 = document.querySelectorAll('.menu.color .menu-list .menu-item'); // select add wish element
+
+var addWish = document.querySelector('.single-product .info .icons .icon i');
 (0, _Cart["default"])();
 (0, _MainScroll["default"])();
 (0, _Nav["default"])();
 (0, _Scrollup["default"])();
 (0, _WishCartSelect["default"])();
 (0, _Wish["default"])();
+(0, _ShopSortBy["default"])(listSpan, sortMenu, angleMenu, sortMenuItem);
+(0, _ShopSortBy["default"])(listSpan2, sortMenu2, angleMenu2, sortMenuItem2); // add click event on add wish element
+
+(0, _Functions.addEvent)(addWish, 'click', function (event) {
+  event.target.classList.toggle('select');
+});
 $('.owl-carousel').owlCarousel({
   loop: true,
   items: 1,
@@ -361,4 +440,4 @@ $('.owl-carousel').owlCarousel({
   smartSpeed: 700
 });
 
-},{"./includes/Cart.js":1,"./includes/MainScroll.js":3,"./includes/Nav.js":4,"./includes/Scrollup.js":5,"./includes/Slider.js":6,"./includes/Wish.js":7,"./includes/WishCartSelect":8}]},{},[9]);
+},{"./includes/Cart.js":1,"./includes/Functions":2,"./includes/MainScroll.js":3,"./includes/Nav.js":4,"./includes/Scrollup.js":5,"./includes/ShopSortBy":6,"./includes/Slider.js":7,"./includes/Wish.js":8,"./includes/WishCartSelect":9}]},{},[10]);

@@ -1,3 +1,12 @@
+// catch list span
+const listSpan = document.querySelector('.menu .menu-head');
+// catch sort by menu
+const sortMenu = document.querySelector('.menu .menu-list');
+// catch angle down menu
+const angleMenu = document.querySelector('.menu .menu-head i');
+// catch sort by menu item
+const sortMenuItem = document.querySelectorAll('.menu .menu-list .menu-item');
+
 import Cart from './includes/Cart.js';
 import MainScroll from './includes/MainScroll.js';
 import Nav from './includes/Nav.js';
@@ -17,7 +26,7 @@ Nav();
 Scrollup();
 WishCartSelect();
 Wish();
-ShopSortBy();
+ShopSortBy(listSpan,sortMenu,angleMenu,sortMenuItem);
 Pagination();
 ShopCategory();
 Colors();

@@ -1,20 +1,9 @@
 import {addEvent} from './Functions.js';
-function ShopSortBy(){
-    // catch list span
-    const listSpan = document.querySelector('.products .drop .menu .menu-head');
-    // catch sort by menu
-    const sortMenu = document.querySelector('.products .drop .menu .menu-list');
-    // catch angle down menu
-    const angleMenu = document.querySelector('.products .drop .menu .menu-head i');
-    // add click event to span list
+function ShopSortBy(listSpan,sortMenu,angleMenu,sortMenuItem){
     addEvent(listSpan,'click',(event)=>{
         sortMenu.classList.toggle('face');
         angleMenu.classList.toggle('rotate');
     });
-
-
-    // catch sort by menu item
-    const sortMenuItem = document.querySelectorAll('.products .drop .menu .menu-list .menu-item');
     sortMenuItem.forEach(item=>{
         // add click event to open sort by menu and rotate angle menu
         addEvent(item,'click',(event)=>{
@@ -30,6 +19,5 @@ function ShopSortBy(){
             angleMenu.classList.toggle('rotate');
         })
     });
-    // 
 }
 export default ShopSortBy;

@@ -1,6 +1,5 @@
 .single-product{
     .slider{
-        overflow: hidden;
         .owl-carousel{
             position: relative;
             .owl-nav{
@@ -55,6 +54,132 @@
         }
     }
     .info{
-        border: 1px solid red;
+        height: 100%;
+        padding: 200px 0 0 100px;
+        .product-brand{
+            color: rgba(0,0,0,.33);
+            font-size: .85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .product-title{
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .price{
+            font-size: 1.4rem;
+            font-weight: 600;
+            &.old-price{
+                margin-right: 1rem;
+                color: #888;
+                position: relative;
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: 14px;
+                    left: -2px;
+                    width: 95%;
+                    height: 3px;
+                    background: #888;
+                }
+            }
+            &.new-price{
+                color: var(--danger);
+            }
+        }
+        .product-description{
+            color: #777;
+            line-height: 1.8;
+            margin: 0;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .product-choose{
+            margin-bottom: 1rem;
+            .menu{
+                font-size: 0.8rem;
+                font-weight: 600;
+                position: relative;
+                padding: 10px;
+                background: rgba(0,0,0,0.01);
+                border: 1px solid #ccc;
+                text-transform: uppercase;
+                &:first-child{
+                    margin-right: 3rem;
+                }
+                .menu-head{
+                    cursor: pointer;
+                    .first-item{
+                        margin-right: 5rem;
+                    }
+                    i{
+                        margin-left: 0.2rem;
+                        transition: all 0.3s ease-in-out;
+                        &.rotate{
+                            transform: rotateZ(180deg);
+                        }
+                    }
+                }
+                .menu-list{
+                    position: absolute;
+                    margin: 0;
+                    border: 1px solid #ddd;
+                    z-index: 5;
+                    background: #F6F6F6;
+                    width: 210px;
+                    top: 42px;
+                    left: 0;
+                    text-align: left;
+                    transition: all 0.3s ease-in-out;
+                    height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    &.face{
+                        height: 143px;
+                        opacity: 1; 
+                    }
+                    .menu-item{
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+                        &.active{
+                            color: $mainColor;
+                        }
+                    }
+
+                }
+            }
+        }
+        .icon{
+            &.add-cart{
+                margin-right: 1.5rem;
+                border-radius: 0;
+                padding: 0.75rem 1.25rem;
+                font-size: 0.8rem;
+                font-weight: 600;
+                outline: 0;
+                border: 0;
+                transition: background 0.3s ease-in-out;
+                &:hover{
+                    background: var(--danger);
+                }
+                &:active,
+                &:focus{
+                    box-shadow: none !important;
+                }
+            }
+            &.add-wish{
+                align-self: center;
+                i{
+                    color: #999;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    &.select{
+                        color: var(--danger)
+                    }
+                }
+            }
+        }
     }
 }
