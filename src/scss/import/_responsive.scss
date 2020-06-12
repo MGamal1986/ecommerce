@@ -18,9 +18,6 @@ body{
         .single-product{
             .info{
                 padding: 0 25px;
-                .product-brand{
-                    
-                }
                 .product-title{
                     font-size: 1.5rem;
                 }
@@ -90,9 +87,6 @@ body{
                 .product-title{
                     margin-bottom: 0.75rem;
                 }
-                .price{
-                   
-                }
                 .product-description{
                     font-size: 0.85rem;
                     line-height: 1.6;
@@ -108,9 +102,6 @@ body{
                             }
                         }
                     }
-                }
-                .icon{
-                   
                 }
             }
         }
@@ -345,6 +336,37 @@ body{
                 display: block !important;
                 .card{
                     margin-bottom: 1rem;
+                }
+            }
+        }
+        .single-product{
+            .info{
+                .product-brand{
+                    margin-bottom: 0.75rem;
+                }
+                .product-title{
+                    margin-bottom: 0.75rem;
+                    font-size: 1.2rem;
+                }
+                .product-description{
+                    font-size: 0.85rem;
+                    line-height: 1.6;
+                    margin-top: 0.75rem;
+                    margin-bottom: 0.75rem;
+                }
+                .product-choose{
+                    margin-bottom: 0.75rem;
+                    .menu{
+                        font-size: 0.75rem;
+                        .menu-head{
+                            .first-item{
+                                margin-right: 2rem;
+                            }
+                        }
+                        .menu-list{
+                            width: 170px;
+                        }
+                    }
                 }
             }
         }
