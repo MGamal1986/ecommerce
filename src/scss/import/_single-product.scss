@@ -55,7 +55,10 @@
     }
     .info{
         height: 100%;
-        padding: 200px 0 0 100px;
+        padding: 0 50px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
         .product-brand{
             color: rgba(0,0,0,.33);
             font-size: .85rem;
@@ -181,5 +184,9 @@
                 }
             }
         }
+    }
+    // special size of screen
+    @media screen and (max-width:900px){
+        padding: 25px 0;
     }
 }

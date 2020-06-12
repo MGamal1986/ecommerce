@@ -15,6 +15,21 @@ body{
                 }
             }
         }
+        .single-product{
+            .info{
+                padding: 0 25px;
+                .product-brand{
+                    
+                }
+                .product-title{
+                    font-size: 1.5rem;
+                }
+                .price{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+            }
+        }
     }
     @include mMd{
         nav.navigation{
@@ -65,6 +80,38 @@ body{
         .products{
             .product-list{
                 grid-template-columns: repeat(2,1fr) !important;
+            }
+        }
+        .single-product{
+            .info{
+                .product-brand{
+                    margin-bottom: 0.75rem;
+                }
+                .product-title{
+                    margin-bottom: 0.75rem;
+                }
+                .price{
+                   
+                }
+                .product-description{
+                    font-size: 0.85rem;
+                    line-height: 1.6;
+                    margin-top: 0.75rem;
+                    margin-bottom: 0.75rem;
+                }
+                .product-choose{
+                    margin-bottom: 0.75rem;
+                    .menu{
+                        .menu-head{
+                            .first-item{
+                                margin-right: 2.5rem;
+                            }
+                        }
+                    }
+                }
+                .icon{
+                   
+                }
             }
         }
     }
@@ -199,6 +246,12 @@ body{
                         font-size: 2.5rem;
                     }
                 }
+            }
+        }
+        .single-product{
+            padding: 0;
+            .info{
+                padding: 25px;
             }
         }
         footer{
