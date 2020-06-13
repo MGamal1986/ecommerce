@@ -17,6 +17,8 @@ const angleMenu2 = document.querySelector('.menu.color .menu-head i');
 const sortMenuItem2 = document.querySelectorAll('.menu.color .menu-list .menu-item');
 // select add wish element
 const addWish = document.querySelector('.single-product .info .icons .icon i');
+// select addcart element
+const addCart = document.querySelector('.single-product .info .icons .icon.add-cart');
 
 import Cart from './includes/Cart.js';
 import MainScroll from './includes/MainScroll.js';
@@ -27,6 +29,36 @@ import WishCartSelect from './includes/WishCartSelect';
 import Wish from './includes/Wish.js';
 import ShopSortBy from './includes/ShopSortBy';
 import { addEvent , ColorChange } from './includes/Functions';
+import AddWish from './includes/AddWish';
+import AddCart from './includes/AddCart';
+
+
+let wish = new AddWish();
+
+addEvent(addWish,'click',(event)=>{
+    if(!event.target.classList.contains('select')){
+        wish.increase();
+        wish.addLocal();
+    }else{
+        wish.decrease();
+        wish.removeLocal();
+    }
+})
+
+let cart = new AddCart();
+
+addEvent(addCart,'click',(event)=>{
+    event.target.classList.toggle('select');
+    if(event.target.classList.contains('select')){
+        cart.increase();
+        cart.addLocal();
+    }else{
+        cart.decrease();
+        cart.removeLocal();
+    }
+})
+
+
 
 Cart();
 MainScroll();
