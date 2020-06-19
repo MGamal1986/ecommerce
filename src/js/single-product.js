@@ -31,8 +31,10 @@ import ShopSortBy from './includes/ShopSortBy';
 import { addEvent , ColorChange } from './includes/Functions';
 import AddWish from './includes/AddWish';
 import AddCart from './includes/AddCart';
+import CheckLocal from './includes/LocalStorage';
 
-
+CheckLocal();
+// create instance of addwish class that add products in wish list
 let wish = new AddWish();
 
 addEvent(addWish,'click',(event)=>{
@@ -45,6 +47,7 @@ addEvent(addWish,'click',(event)=>{
     }
 })
 
+// create instance of addcart class that add products in wish list
 let cart = new AddCart();
 
 addEvent(addCart,'click',(event)=>{

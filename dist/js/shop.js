@@ -13331,6 +13331,102 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var AddCart = /*#__PURE__*/function () {
+  function AddCart() {
+    _classCallCheck(this, AddCart);
+
+    this.wishElement = document.querySelector('nav .user .cart .no-of-items');
+  }
+
+  _createClass(AddCart, [{
+    key: "increase",
+    value: function increase() {
+      this.wishElement.textContent++;
+    }
+  }, {
+    key: "decrease",
+    value: function decrease() {
+      this.wishElement.textContent--;
+    }
+  }, {
+    key: "addLocal",
+    value: function addLocal() {
+      localStorage.setItem('cart', this.wishElement.textContent);
+    }
+  }, {
+    key: "removeLocal",
+    value: function removeLocal() {
+      localStorage.removeItem('cart');
+    }
+  }]);
+
+  return AddCart;
+}();
+
+exports["default"] = AddCart;
+
+},{}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var AddWish = /*#__PURE__*/function () {
+  function AddWish() {
+    _classCallCheck(this, AddWish);
+
+    this.wishElement = document.querySelector('nav .user .like .no-of-items');
+  }
+
+  _createClass(AddWish, [{
+    key: "increase",
+    value: function increase() {
+      this.wishElement.textContent++;
+    }
+  }, {
+    key: "decrease",
+    value: function decrease() {
+      this.wishElement.textContent--;
+    }
+  }, {
+    key: "addLocal",
+    value: function addLocal() {
+      localStorage.setItem('wish', this.wishElement.textContent);
+    }
+  }, {
+    key: "removeLocal",
+    value: function removeLocal() {
+      localStorage.removeItem('wish');
+    }
+  }]);
+
+  return AddWish;
+}();
+
+exports["default"] = AddWish;
+
+},{}],5:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 var _Functions = require("./Functions.js");
 
 function Cart() {
@@ -13377,7 +13473,7 @@ function Cart() {
 var _default = Cart;
 exports["default"] = _default;
 
-},{"./Functions.js":5}],4:[function(require,module,exports){
+},{"./Functions.js":7}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13393,7 +13489,7 @@ function ColorBrands() {
   });
 }
 
-},{}],5:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13405,7 +13501,31 @@ function addEvent(el, ev, cb) {
   el.addEventListener(ev, cb);
 }
 
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = CheckLocal;
+var wishElement = document.querySelector('nav .user .like .no-of-items');
+var cartElement = document.querySelector('nav .user .cart .no-of-items');
+
+function CheckLocal() {
+  if (localStorage.getItem('cart') === null) {
+    cartElement.innerHTML = 0;
+  } else {
+    cartElement.innerHTML = localStorage.getItem('cart');
+  }
+
+  if (localStorage.getItem('wish') === null) {
+    wishElement.innerHTML = 0;
+  } else {
+    wishElement.innerHTML = localStorage.getItem('wish');
+  }
+}
+
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13432,7 +13552,7 @@ function MainScroll() {
 var _default = MainScroll;
 exports["default"] = _default;
 
-},{"./Functions.js":5}],7:[function(require,module,exports){
+},{"./Functions.js":7}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13532,7 +13652,7 @@ function Nav() {
 var _default = Nav;
 exports["default"] = _default;
 
-},{"./Functions.js":5}],8:[function(require,module,exports){
+},{"./Functions.js":7}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13613,7 +13733,7 @@ function Pagination() {
 var _default = Pagination;
 exports["default"] = _default;
 
-},{"./Functions":5}],9:[function(require,module,exports){
+},{"./Functions":7}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13637,7 +13757,7 @@ function RangeSlider() {
   });
 }
 
-},{"ion-rangeslider":1,"jquery":2}],10:[function(require,module,exports){
+},{"ion-rangeslider":1,"jquery":2}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13667,7 +13787,7 @@ function Scrollup() {
 var _default = Scrollup;
 exports["default"] = _default;
 
-},{"./Functions.js":5}],11:[function(require,module,exports){
+},{"./Functions.js":7}],14:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13692,7 +13812,7 @@ function ShopCategory() {
 var _default = ShopCategory;
 exports["default"] = _default;
 
-},{"./Functions":5}],12:[function(require,module,exports){
+},{"./Functions":7}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13743,7 +13863,7 @@ function ShopSortBy(listSpan, sortMenu, angleMenu, sortMenuItem) {
 var _default = ShopSortBy;
 exports["default"] = _default;
 
-},{"./Functions.js":5}],13:[function(require,module,exports){
+},{"./Functions.js":7}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13778,7 +13898,7 @@ function Slider() {
 var _default = Slider;
 exports["default"] = _default;
 
-},{}],14:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13815,7 +13935,7 @@ function Wish() {
 var _default = Wish;
 exports["default"] = _default;
 
-},{"./Functions.js":5}],15:[function(require,module,exports){
+},{"./Functions.js":7}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13848,7 +13968,7 @@ function WishCartSelect() {
 var _default = WishCartSelect;
 exports["default"] = _default;
 
-},{"./Functions.js":5}],16:[function(require,module,exports){
+},{"./Functions.js":7}],19:[function(require,module,exports){
 "use strict";
 
 var _Cart = _interopRequireDefault(require("./includes/Cart.js"));
@@ -13875,6 +13995,14 @@ var _ColorsBrands = _interopRequireDefault(require("./includes/ColorsBrands"));
 
 var _RangeSlider = _interopRequireDefault(require("./includes/RangeSlider"));
 
+var _LocalStorage = _interopRequireDefault(require("./includes/LocalStorage"));
+
+var _AddWish = _interopRequireDefault(require("./includes/AddWish"));
+
+var _AddCart = _interopRequireDefault(require("./includes/AddCart"));
+
+var _Functions = require("./includes/Functions");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // catch list span
@@ -13884,7 +14012,42 @@ var sortMenu = document.querySelector('.menu .menu-list'); // catch angle down m
 
 var angleMenu = document.querySelector('.menu .menu-head i'); // catch sort by menu item
 
-var sortMenuItem = document.querySelectorAll('.menu .menu-list .menu-item');
+var sortMenuItem = document.querySelectorAll('.menu .menu-list .menu-item'); // select add wish element
+
+var addWish = document.querySelectorAll('.product-list .wishlist i'); // select addcart element
+
+var addCart = document.querySelectorAll('.product-list .add-card i');
+(0, _LocalStorage["default"])(); // create instance of addwish class that add products in wish list
+
+var wish = new _AddWish["default"]();
+addWish.forEach(function (btn) {
+  (0, _Functions.addEvent)(btn, 'click', function (event) {
+    event.target.classList.toggle('clicked');
+
+    if (event.target.classList.contains('clicked')) {
+      wish.increase();
+      wish.addLocal();
+    } else {
+      wish.decrease();
+      wish.removeLocal();
+    }
+  });
+}); // create instance of addcart class that add products in wish list
+
+var cart = new _AddCart["default"]();
+addCart.forEach(function (btn) {
+  (0, _Functions.addEvent)(btn, 'click', function (event) {
+    event.target.classList.toggle('clicked');
+
+    if (event.target.classList.contains('clicked')) {
+      cart.increase();
+      cart.addLocal();
+    } else {
+      cart.decrease();
+      cart.removeLocal();
+    }
+  });
+});
 (0, _Cart["default"])();
 (0, _MainScroll["default"])();
 (0, _Nav["default"])();
@@ -13897,4 +14060,4 @@ var sortMenuItem = document.querySelectorAll('.menu .menu-list .menu-item');
 (0, _ColorsBrands["default"])();
 (0, _RangeSlider["default"])();
 
-},{"./includes/Cart.js":3,"./includes/ColorsBrands":4,"./includes/MainScroll.js":6,"./includes/Nav.js":7,"./includes/Pagaination":8,"./includes/RangeSlider":9,"./includes/Scrollup.js":10,"./includes/ShopCategory":11,"./includes/ShopSortBy.js":12,"./includes/Slider.js":13,"./includes/Wish.js":14,"./includes/WishCartSelect":15}]},{},[16]);
+},{"./includes/AddCart":3,"./includes/AddWish":4,"./includes/Cart.js":5,"./includes/ColorsBrands":6,"./includes/Functions":7,"./includes/LocalStorage":8,"./includes/MainScroll.js":9,"./includes/Nav.js":10,"./includes/Pagaination":11,"./includes/RangeSlider":12,"./includes/Scrollup.js":13,"./includes/ShopCategory":14,"./includes/ShopSortBy.js":15,"./includes/Slider.js":16,"./includes/Wish.js":17,"./includes/WishCartSelect":18}]},{},[19]);
