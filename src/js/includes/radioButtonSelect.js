@@ -8,7 +8,6 @@ const labels = document.querySelectorAll('.checkout-details .payment-options lab
 export default function RadioSelect(){
     labels.forEach((label)=>{
         addEvent(label,'click',(event)=>{
-            console.log('good event click');
             
         })
     })
